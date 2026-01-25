@@ -2,7 +2,7 @@
 =====================================================*/
 :root {
   /* Contents */
-  --cont-width: 390px;
+  --cont-width: 1440px;
 
   /* Scrollable Visual Width */
   --main-cont: 390px;
@@ -14,7 +14,9 @@
   --color-bg: #f5f5f5;
   --color-text: #333;
   --color-hover: #bbb;
-  --color-reverse: #fff;      
+  --color-reverse: #fff;  
+  --color-placeholder: #C7C7C7;
+  --color-card: #fff;    
 
   --color-gray: #D9D9D9;
   --color-light-gray: #f8f8f8;

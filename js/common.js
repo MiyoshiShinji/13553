@@ -7,15 +7,15 @@ $(function () {
 	$(function () {
 		//PC / SP共通で実行するスクリプト関数をここに追記
 		HambMenu();
-		Accordion();
-		ChangeTab();
-		ScrollAppear();
+		/* Accordion(); */
+		/* ChangeTab(); */
+		/* ScrollAppear(); */
 		mv1Slider();
-		FadeIn();
+		/* FadeIn(); */
 		Modal();
 		/* Loading(); */
-		AfterLoad();
-		Gdpr();
+		/* AfterLoad(); */
+		/* Gdpr(); */
 	});
 
 	/* ブレイクポイントに基づく実行振り分け
@@ -250,21 +250,25 @@ $(function () {
 
 	/* モーダル
 	=====================================================*/
-	function Modal() {
-		$(".js_modal_open").each(function () {
-			$(this).on("click", function () {
-				var target = $(this).data("target");
-				var modal = document.getElementById(target);
-				$(modal).fadeIn();
-				return false;
-			});
-		});
+function Modal() {
+  $(".js_modal_open").on("click", function () {
+    var target = $(this).data("target");
+    console.log("target:", target); // デバッグ用
+    var modal = document.getElementById(target);
+    console.log("modal:", modal); // デバッグ用
+    $(modal).fadeIn();
+    return false;
+  });
 
-		$(".js_modal_close").on("click", function () {
-			$(".js_modal").fadeOut();
-			return false;
-		});
-	}
+  $(".js_modal_close").on("click", function () {
+    $(".js_modal").fadeOut();
+    return false;
+  });
+}
+
+$(document).ready(function() {
+  Modal();
+});
 
 	/* ローディング
 	=====================================================*/

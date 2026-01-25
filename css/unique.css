@@ -54,7 +54,7 @@
   flex-flow: column;
   grid-auto-columns: 1fr;
   gap: 16px;
-  grid-template-columns: 1fr var(--cont-width) 1fr; 
+  grid-template-columns: 1fr var(--main-cont) 1fr; 
   grid-template-rows: auto;
 }
 
@@ -100,37 +100,63 @@
 
 .content_layer {
   position: relative;
-  max-width: var(--cont-width);
+  max-width: var(--main-cont);
   margin: 0 auto;
-  background-image: url(../img/common/content_a_background_sp.svg);
-  background-position: 50% 0%;
-  background-size: contain;
-  background-repeat: repeat-y;
 
   border-style: none solid;
   border-width: 1px;
   border-color: var(--color-border);
 }
 
+.content_main{
+  background-image: url(../img/common/content_b_background_sp.svg);
+  background-position: 50% 0%;
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+
 .nav_layer_img_1 {
   position: absolute;
+  width: 17rem;
+  height: 12.8rem;
   inset: 13rem 3rem auto auto;
 }
 .nav_layer_img_2 {
   position: absolute;
+  width: 10.5rem;
+  height: 14rem;
   inset: auto auto 6rem 4rem;
 }
 .nav_layer_img_3 {
   position: absolute;
+  width: 10.5rem;
+  height: 14rem;
   inset: 9rem 3rem auto auto;
 }
 .nav_layer_img_4 {
   position: absolute;
+  width: 17rem;
+  height: 12.8rem;
   inset: auto 20rem 8rem auto;
+}
+
+.nav_layer_img_5{
+  width: 10.5rem;
+  height: 14rem;
+}
+
+.nav_layer_img_6{
+  width: 17rem;
+  height: 12.8rem;  
 }
 
 .content_header{
   padding: 15rem 2rem 9.5rem 2rem;
+
+  background-image: url(../img/common/content_a_background_sp.svg);
+  background-position: 50% 0%;
+  background-size: contain;
+  background-repeat: repeat-y;
 }
 
 .mv_1_slider_wrap {
@@ -186,22 +212,194 @@
   top: -4rem;
 }
 
-.content_ttl{
-
+.content_detail{
+  background-color: var(--color-reverse);
+  color: var(--color-blue);
+  padding: 0.5rem;
 }
 
-.content_ttl{
-  
+.content_detail.u_ic::before{
+  content: "";
+  display: inline-block;
+  position: relative;
+  border-radius: 100%;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 1rem;
+  background-color: var(--color-blue);
 }
 
 /*Search section
 ================================================*/
 .content_search{
-  background-image: url(../img/main/search_section/background_img.svg);
-  background-position: 50% 0%;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-color: var(--color-green);
+  border-radius: 100rem;
+  padding: 12rem 2rem;
+  max-width: 39rem;
 }
+
+.content_search_inr{
+  max-width: 35rem;
+}
+
+.search_selectBox{
+  padding: 1.8rem 3rem;
+  border-radius: 0.4rem;
+  color: var(--color-dark-blue);
+  background-color: var(--color-reverse);
+}
+
+.search_selectBox:has(option[value=""]:checked) {
+  color: var(--color-placeholder);
+}
+.search_option {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .4em 3.6em .4em .8em;
+    border: 2px solid var(--color-blue);
+    border-radius: 3px;
+    color: #333333;
+    cursor: pointer;
+}
+
+.search_checkBox label{
+  display: flex;
+  align-items: center;
+}
+
+.search_input{
+  width: 2rem;
+  height: 2rem;
+  border: none;
+}
+
+input[type="text"].search_text{
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 1.8rem 3rem;
+  border-radius: 100rem;
+  background-color: var(--color-reverse);
+  font-weight: 500;
+}
+
+input[type="text"].search_text::placeholder{
+  color: var(--color-placeholder);
+}
+
+input[type="submit"].search_submit{
+  padding: 1.5rem 5.6rem;
+  background-color: var(--color-blue);
+  border-radius: 100rem;
+  font-weight: 700;
+  border: unset;
+  
+}
+
+/*Job section
+================================================*/
+.content_job{
+  padding-top:  12.5rem;
+}
+
+.job_card_wrap{
+  row-gap: 3rem;
+  column-gap: 3rem;
+}
+
+.card__job{
+  border-radius: 2rem;
+}
+
+.card_img{
+  width: 100%;
+  height: 20rem;
+}
+
+.card_img.card_img__aboutus{
+  height: 26rem;
+}
+
+.job_card_inr{
+  padding: 4rem 2rem 4rem 2rem;
+}
+
+/*About Us section
+================================================*/
+.card__aboutus{
+  border-radius: 2rem;
+}
+
+.aboutus_card_inr{
+  padding: 6rem 2rem 3.5rem 2rem;
+}
+
+/*Flow section
+================================================*/
+.content_flow_inr{
+  padding: 0 1rem 0 2rem;
+}
+
+.card__flow{
+  border-radius: 2rem 0 0 2rem;
+  max-width: 45rem;
+}
+
+.card__flow_inr{
+  position: relative;
+  padding: 0 2rem 0 4rem;
+  gap: 1.8rem;
+}
+
+.card__flow_inr.u_ic::before{
+  width: 0.5rem;
+  height: 110%;
+  background-color: var(--color-blue);
+  inset: -5% auto auto 0%;
+}
+
+.card__flow_inr.u_ic::after{
+  background-image: url(../img/flow/flow_arrow.svg);
+  width: 1.8rem;
+  height: 1.2rem;
+  inset: auto auto -25% 47%;
+}
+
+.card__flow_inr.u_ic:last-of-type::after{
+  content: none;
+}
+
+/*Interview section
+================================================*/
+.content_interview{
+  
+}
+
+.card__interview{
+  position: relative;
+  border-radius: 2rem;
+  padding: 5rem 2rem 2rem 2rem;
+  line-height: 1.7;
+}
+
+.card_modal_btn{
+  position: absolute;
+  inset: auto 3rem 3rem auto;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--color-blue);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.card_modal_btn.u_ic::before{
+  background-image: url(../img/interview/interview_plus.svg);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 
 @media (max-width: 896px) {
   .header {
@@ -284,6 +482,10 @@
     max-width: 100%;
   }
 
+  .content_header{
+    background-size: cover;
+  }
+
   .nav_layer_img_1,
   .nav_layer_img_2,
   .nav_layer_img_3,
@@ -292,7 +494,8 @@
   }
 
   .content_search{
-    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /*============================================================================================
