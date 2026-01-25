@@ -2562,6 +2562,14 @@ map area {
 
 /*    Padding
 =====================================================*/
+/*-- Horizontal / Vertical --*/
+.px_15{
+  padding: 0 1.5rem;
+}
+.px_20 {
+  padding: 0 2rem;
+}
+
 /*-- top --*/
 .pt_0 {
   padding-top: 0 !important;

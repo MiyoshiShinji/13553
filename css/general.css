@@ -205,6 +205,23 @@
   color: var(--color-main);
 }
 
+.g_c_blue{
+  color: var(--color-blue);
+}
+
+@media (max-width: 896px) {
+}
+
+/*    Background Color
+=====================================================*/
+.g_bg_wh {
+  background-color: var(--color-reverse);
+}
+
+.g_bg_light_black{
+  background-color: var(--color-light-black);
+}
+
 /*    Button - basic -
 =====================================================*/
 .g_btn {
@@ -1131,23 +1148,54 @@
   display: none;
   inset: 0;
   z-index: 999;
+  overflow-y: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.g_modal_bg {
+.g_modal::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, new Edge */
+}
+
+.g_modal_cont {
+  width: 100%;
   position: absolute;
+  inset: 0% auto auto 0%;
+  padding: 16rem 2rem 16rem 2rem;
+}
+
+.g_modal_cont_bg{
+  position: absolute;
+  inset: 0% auto auto 0%;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 100svh;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.g_modal_content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 4rem;
+.g_modal_content{
+  position: relative;
+  z-index: 1;
+  max-width: var(--modal-cont);
   background-color: var(--color-reverse);
-  translate: -50%;
+  min-height: 50rem;
+  border-radius: 2rem;
+  padding: 8rem 2rem;
+
+  background-image: url(../img/common/content_b_background_sp.svg);
+  background-position: 50% 0%;
+  background-size: cover;
+  background-repeat: repeat-y;
 }
+
+.g_modal_close_btn{
+  position: absolute;
+  inset: -2.8rem 0.7rem auto auto;
+  background-image: url(../img/common/close_ico.svg);
+  width: 2.2rem;
+  height: 2.2rem;
+} 
 
 @media (max-width: 896px) {
 }

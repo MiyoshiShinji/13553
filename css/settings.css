@@ -7,6 +7,9 @@
   /* Scrollable Visual Width */
   --main-cont: 390px;
 
+  /* Scrollable Modal Width */
+  --modal-cont: 370px;
+
   /* Color */
   --color-main: #fff;
   --color-sub: #fafafa;
@@ -16,7 +19,7 @@
   --color-hover: #bbb;
   --color-reverse: #fff;  
   --color-placeholder: #C7C7C7;
-  --color-card: #fff;    
+  --color-card: #fff;   
 
   --color-gray: #D9D9D9;
   --color-light-gray: #f8f8f8;
