@@ -13,8 +13,8 @@
   <title>パーソル キャリア | Recruit</title>
 
   <!-- favicon / web clip icon -->
-  <link rel="shortcut icon" href="/img/common/favicon.ico" />
-  <link rel="apple-touch-icon" href="/img/common/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/miyoshi/img/common/favicon.ico" />
+  <link rel="apple-touch-icon" href="/miyoshi/img/common/apple-touch-icon.png" />
 
   <!-- OGP -->
   <meta property="og:title" content="" />
@@ -94,7 +94,7 @@
   <main class="l_wrapper">
 
     <div class="header_nav l_flex">
-      <a href="" class="header_search_btn l_flex l_alignItemsCenter l_justifyContentCenter g_c_wh u_fz12 u_medium">Search</a>
+      <a href="#search" class="header_search_btn l_flex l_alignItemsCenter l_justifyContentCenter g_c_wh u_fz12 u_medium g_en">Search</a>
       <div class="g_hamb">
         <div class="g_hamb_inr">
           <div class="g_hamb_inr_line g_hamb_inr_top"></div>
@@ -118,13 +118,13 @@
           <div class="nav_menu_summary l_flex l_alignItemsCenter l_justifyContentCenter">
             <ul class="nav_menu_summary_inr u_fz14 u_bold">
               <li><a href="#top">トップ</a></li>
-              <li><a href="#about">私たちについて</a></li>
-              <li><a href="#interview">社員インタビュー</a></li>
-              <li><a href="#job-introduction">お仕事紹介</a></li>
-              <li><a href="#onboarding-process">入社後の流れ</a></li>
-              <li><a href="#numbers">数字で見る会社情報</a></li>
-              <li><a href="#overview">会社概要</a></li>
-              <li><a href="#gallery">ギャラリー</a></li>
+              <li><a href="#search">仕事検索</a></li>
+              <li><a href="#job">職種紹介</a></li>
+              <li><a href="#aboutus">私たちについて</a></li>
+              <li><a href="#flow">配送センターの1日の流れ</a></li>
+              <li><a href="#interview">スタッフインタビュー</a></li>
+              <li><a href="#faq">よくある質問</a></li>
+              <li><a href="#movie">ドライバー募集動画</a></li>
             </ul>
           </div>
         </div>
@@ -141,7 +141,7 @@
           </figure>
           <a href="#search" class="nav_search_btn u_ic l_flex l_directionColumn u_alignC l_justifyContentCenter l_gap_24 g_c_wh">
             <div class="l_flex l_directionColumn l_alignContentCenter l_gap_6">
-              <div class="u_fz32 u_fz24_md">Search</div>
+              <div class="u_fz32 u_fz24_md g_en">Search</div>
               <div class="u_fz14 u_bold">仕事検索</div>
             </div>
           </a>
@@ -180,9 +180,9 @@
           </div>
         </div>
 
-        <div class="content_header_ttl l_flex l_directionColumn l_gap_16 pt_20 pb_20">
+        <div class="content_header_ttl l_flex l_directionColumn l_gap_16 pt_60 pb_20">
           <h2>等身大の私で<br>いられる職場</h2>
-          <span class="content_header_detail">Diversity＆Inclusion！</span>
+          <span class="content_header_detail u_fz12">Diversity＆Inclusion！</span>
         </div>
 
         <div class="content_header_mv_img">
@@ -196,10 +196,10 @@
       </div>
 
       <div class="content_main">
-        <div class="content_search">
+        <div id="search" class="content_search">
           <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsCenter l_gap_2">
-            <h3>Search</h3>
-            <span class="content_detail u_ic u_bold">仕事検索</span>
+            <h3 class="g_en">Search</h3>
+            <span class="content_detail u_fz16 u_ic u_bold">仕事検索</span>
           </div>
           <div>
             <form name="search_form" class=""></form>
@@ -215,7 +215,7 @@
                   </select>
                 </div>
               </div>
-              <div class="l_flex l_directionColumn l_gap_32 u_alignC pt_32">
+              <div class="search_checkBox_wrap l_flex l_directionColumn l_gap_32 u_alignC pt_32">
                 <div class="u_fz16 u_bold g_c_wh">メリットから探す（複数選択可能）</div>
                 <div class="search_checkBox l_flex l_flexWrap l_gap_20 u_fz14 g_c_wh">
                   <label>
@@ -261,27 +261,29 @@
                 </div>
               </div>
               <div class="l_flex l_directionColumn l_gap_32 l_alignItemsCenter pt_32">
-                <input type="text" name="freeword" id="" data-name="" required="" data-valid="string" minlength="0" maxlength="7" placeholder="フリーワード検索　駅名、沿線など" class="search_text">
                 <input type="submit" name="search_confirm_btn" value="検索" class="search_submit g_c_wh">
               </div>
-              <div class="l_flex l_directionColumn l_gap_32 l_alignItemsCenter pt_40">
-                <input type="text" name="freeword" id="" data-name="" required="" data-valid="string" minlength="0" maxlength="7" placeholder="フリーワード検索　駅名、沿線など" class="search_text">
+              <div class="l_flex l_directionColumn l_gap_32 l_alignItemsCenter jusr pt_40">
+                <div class="l_flex l_directionColumn l_gap_17">
+                  <div class="u_fz16 u_bold g_c_wh">メリットから探す（複数選択可能）</div>
+                  <input type="text" name="freeword" id="" data-name="" required="" data-valid="string" minlength="0" maxlength="7" placeholder="フリーワード検索　駅名、沿線など" class="search_text">
+                </div>
                 <input type="submit" name="search_confirm_btn" value="検索" class="search_submit g_c_wh">
               </div>
             </form>
           </div>
         </div>
-        <div class="content_job">
+        <div id="job" class="content_job">
           <div class="l_wrap_inr">
             <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsStart l_gap_2">
-              <h3>Job</h3>
-              <span class="content_detail u_ic u_bold">職種紹介</span>
+              <h3 class="g_en">Job</h3>
+              <span class="content_detail u_fz16 u_ic u_bold">職種紹介</span>
             </div>
 
             <ul class="job_card_wrap l_grid pt_60">
               <li class="g_card card__job l_grid_12 l_grid_md_6 l_grid_sm_12">
                 <figure class="card_img">
-                  <img src="img/cards/card_job_1.png" alt="">
+                  <img src="img/cards/card_job_1.jpg" alt="">
                 </figure>
                 <div class="job_card_inr l_flex l_directionColumn l_gap_20">
                   <h4>常温便配送ドライバー</h4>
@@ -290,7 +292,7 @@
               </li>
               <li class="g_card card__job l_grid_12 l_grid_md_6 l_grid_sm_12">
                 <figure class="card_img">
-                  <img src="img/cards/card_job_2.png" alt="">
+                  <img src="img/cards/card_job_2.jpg" alt="">
                 </figure>
                 <div class="job_card_inr l_flex l_directionColumn l_gap_20">
                   <h4>定温便配送ドライバー</h4>
@@ -299,7 +301,7 @@
               </li>
               <li class="g_card card__job l_grid_12 l_grid_md_6 l_grid_sm_12">
                 <figure class="card_img">
-                  <img src="img/cards/card_job_3.png" alt="">
+                  <img src="img/cards/card_job_3.jpg" alt="">
                 </figure>
                 <div class="job_card_inr l_flex l_directionColumn l_gap_20">
                   <h4>冷凍便配送ドライバー</h4>
@@ -308,7 +310,7 @@
               </li>
               <li class="g_card card__job l_grid_12 l_grid_md_6 l_grid_sm_12">
                 <figure class="card_img">
-                  <img src="img/cards/card_job_4.png" alt="">
+                  <img src="img/cards/card_job_4.jpg" alt="">
                 </figure>
                 <div class="job_card_inr l_flex l_directionColumn l_gap_20">
                   <h4>常温庫内作業スタッフ</h4>
@@ -336,7 +338,7 @@
             </ul>
           </div>
         </div>
-        <div class="content_aboutus pt_104">
+        <div id="aboutus" class="content_aboutus pt_104">
           <div class="l_wrap_inr">
             <div class="g_card card__aboutus">
               <figure class="card_img card_img__aboutus">
@@ -345,8 +347,8 @@
 
               <div class="aboutus_card_inr l_flex l_directionColumn l_gap_60">
                 <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsStart l_gap_2">
-                  <h3>About us</h3>
-                  <span class="content_detail u_ic u_bold">私たちについて</span>
+                  <h3 class="g_en">About us</h3>
+                  <span class="content_detail u_fz16 u_ic u_bold">私たちについて</span>
                 </div>
 
                 <div>
@@ -368,11 +370,11 @@
           </div>
         </div>
 
-        <div class="content_flow pt_104">
+        <div id="flow" class="content_flow pt_104">
           <div class="content_flow_inr l_flex l_directionColumn l_gap_60">
             <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsStart l_gap_2 px_20">
-              <h3>Flow</h3>
-              <span class="content_detail u_ic u_bold">入社後の流れ</span>
+              <h3 class="g_en">Flow</h3>
+              <span class="content_detail u_fz16 u_ic u_bold">入社後の流れ</span>
             </div>
 
             <div class="g_card card__flow l_alignSelfEnd pt_60 pb_60">
@@ -406,21 +408,21 @@
           </div>
         </div>
 
-        <div class="content_interview pt_104">
+        <div id="interview" class="content_interview pt_104">
           <div class="l_wrap_inr">
             <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsEnd l_gap_2 px_20">
-              <h3>Interview</h3>
-              <span class="content_detail u_ic u_bold">社員インタビュー</span>
+              <h3 class="g_en">Interview</h3>
+              <span class="content_detail u_fz16 u_ic u_bold">社員インタビュー</span>
             </div>
 
-            <ul class="l_grid l_gap_0 l_gap_32 pt_60">
+            <ul class="l_grid l_gap_32_y pt_60">
               <li class="g_card card__interview js_modal_open l_grid_12 l_grid_md_6 l_grid_sm_12 l_flex l_directionColumn l_gap_32" data-target="interview_modal_1">
                 <div class="l_flex l_directionColumn l_gap_20">
                   <span class="u_fz20 u_bold">「ドライバーになりたい」<br>という憧れが叶った</span>
                   <span class="u_fz14">冷凍便配送ドライバー<br>Oさん／正社員／2020年入社</span>
                 </div>
                 <figure class="card_interview_img">
-                  <img src="img/cards/card_interview_1.png" alt="">
+                  <img src="img/cards/card_interview_1.jpg" alt="">
                 </figure>
                 <div  class="card_modal_btn u_ic l_flex l_alignItemsCenter l_justifyContentCenter"></div>
               </li>
@@ -450,10 +452,10 @@
           </div>
 
           <div id="interview_modal_1" class="g_modal js_modal">
-            <div class="g_modal_cont">
+            <div class="interview_modal_cont">
               <div class="g_modal_cont_bg js_modal_close"></div>
-              <div class="g_modal_content u_ic mx_auto">
-                <button class="g_modal_close_btn js_modal_close"></button>
+              <div class="interview_modal_content u_ic mx_auto">
+                <button class="interview_modal_close_btn js_modal_close"></button>
 
                 <div class="g_card card__modal">
                   <figure class="card_interview_img">
@@ -504,10 +506,10 @@
           </div>
 
           <div id="interview_modal_2" class="g_modal js_modal">
-            <div class="g_modal_cont">
+            <div class="interview_modal_cont">
               <div class="g_modal_cont_bg js_modal_close"></div>
-              <div class="g_modal_content u_ic mx_auto">
-                <button class="g_modal_close_btn js_modal_close"></button>
+              <div class="interview_modal_content u_ic mx_auto">
+                <button class="interview_modal_close_btn js_modal_close"></button>
 
                 <div class="g_card card__modal">
                   <figure class="card_interview_img">
@@ -558,10 +560,10 @@
           </div>
 
           <div id="interview_modal_3" class="g_modal js_modal">
-            <div class="g_modal_cont">
+            <div class="interview_modal_cont">
               <div class="g_modal_cont_bg js_modal_close"></div>
-              <div class="g_modal_content u_ic mx_auto">
-                <button class="g_modal_close_btn js_modal_close"></button>
+              <div class="interview_modal_content u_ic mx_auto">
+                <button class="interview_modal_close_btn js_modal_close"></button>
 
                 <div class="g_card card__modal">
                   <figure class="card_interview_img">
@@ -612,10 +614,10 @@
           </div>
         </div>
 
-        <div class="content_faq l_flex l_directionColumn pt_104 l_gap_60">
+        <div id="faq" class="content_faq l_flex l_directionColumn pt_104 l_gap_60">
           <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsStart l_gap_2">
-            <h3>FAQ</h3>
-            <span class="content_detail u_ic u_bold">よくある質問</span>
+            <h3 class="g_en">FAQ</h3>
+            <span class="content_detail u_fz16 u_ic u_bold">よくある質問</span>
           </div>
 
           <div class="g_card card__faq l_alignSelfEnd pt_60 pb_60">
@@ -648,29 +650,50 @@
           </div>
         </div> 
 
-        <div class="content_movie">
-          <div class="content_movie_inr" style="height: 62rem;">
+        <div id="movie" class="content_movie">
+          <div class="content_movie_inr">
             <div class="l_wrap_inr l_flex l_directionColumn l_gap_80">
               <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsEnd px_15 l_gap_2">
-                <h3>Movie</h3>
-                <span class="content_detail u_ic u_bold">ドライバー募集動画</span>
+                <h3 class="g_en">Movie</h3>
+                <span class="content_detail u_fz16 u_ic u_bold">ドライバー募集動画</span>
               </div>
 
-              <div class="movie_video"></div>
-
-              <a href="#search" class="nav_search_btn u_ic l_flex l_directionColumn u_alignC l_justifyContentCenter l_gap_24 g_c_wh">
-                <div class="l_flex l_directionColumn l_alignContentCenter l_gap_6">
-                  <div class="u_fz32 u_fz24_md">Search</div>
-                  <div class="u_fz14 u_bold">仕事検索</div>
+                <div class="movie_video">
+                  <iframe class="movie_video_inr"
+                    src="https://www.youtube.com/embed/dWzRivU8xQQ?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&modestbranding=1"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                  </iframe>
+                  <div class="js_modal_open" data-target="movie_modal_1"></div>
                 </div>
-              </a>
               
             </div>
+            <div class="l_flex l_justifyContentCenter">
+                <a href="#search" class="movie_search_btn u_ic l_flex l_directionColumn u_alignC l_justifyContentCenter l_gap_24 g_c_wh">
+                  <div class="l_flex l_directionColumn l_alignContentCenter l_gap_6">
+                    <div class="u_fz32 u_fz24_md g_en">Search</div>
+                    <div class="u_fz14 u_bold">仕事検索</div>
+                  </div>
+                </a>
+              </div>
           </div>
-          <div class="content_movie_btm" style="height: 30rem;">
+          <div class="content_movie_btm">
+          </div>
+
+          <div id="movie_modal_1" class="g_modal js_modal movie_modal">
+            <div class="g_modal_cont_bg js_modal_close"></div>
+            <div class="g_modal_content js_modal_close u_ic l_flex l_alignItemsCenter l_justifyContentCenter">
+              <iframe class="g_modal_content_inr"
+                src="https://www.youtube.com/embed/dWzRivU8xQQ?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=dWzRivU8xQQ"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+              </iframe>
+              <div class="g_modal_close_btn u_ic js_modal_close"></div>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </main>

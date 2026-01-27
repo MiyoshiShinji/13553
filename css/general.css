@@ -1158,13 +1158,6 @@
   display: none; /* Chrome, Safari, new Edge */
 }
 
-.g_modal_cont {
-  width: 100%;
-  position: absolute;
-  inset: 0% auto auto 0%;
-  padding: 16rem 2rem 16rem 2rem;
-}
-
 .g_modal_cont_bg{
   position: absolute;
   inset: 0% auto auto 0%;
@@ -1174,30 +1167,63 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.g_modal_content{
-  position: relative;
-  z-index: 1;
-  max-width: var(--modal-cont);
-  background-color: var(--color-reverse);
-  min-height: 50rem;
-  border-radius: 2rem;
-  padding: 8rem 2rem;
-
-  background-image: url(../img/common/content_b_background_sp.svg);
-  background-position: 50% 0%;
-  background-size: cover;
-  background-repeat: repeat-y;
+.g_modal_content {
+  width: 100%;
+  height: 100%;
 }
 
-.g_modal_close_btn{
+.g_modal_content_inr{
+  width: 65vw;
+  aspect-ratio: 16/9;
+  position: relative;
+  z-index: 1;
+  padding: 4rem;
+  border-radius: 2rem;
+  background-color: var(--color-reverse); 
+}
+  
+
+.g_modal_close_btn {
   position: absolute;
-  inset: -2.8rem 0.7rem auto auto;
+  inset: -7rem 0 auto auto;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--color-blue);
+  border-radius: 100%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.g_modal_close_btn.u_ic::before {
   background-image: url(../img/common/close_ico.svg);
+  background-size: contain;
+  background-position: 50% 50%;
   width: 2.2rem;
   height: 2.2rem;
-} 
+}
+
+
 
 @media (max-width: 896px) {
+  .g_modal_content_inr {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .g_modal_close_btn {
+    inset: -4rem 0 auto auto;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .g_modal_close_btn.u_ic::before {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
 }
 
 @media (max-width: 576px) {
