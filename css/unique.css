@@ -2,6 +2,26 @@
 
 @import "settings.css";
 
+/*    リンクアンダーライン　アニメーション
+=====================================================*/
+.u_ic.underline_link::before{
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  left: 0;
+  width: 100%;
+  height: 0.15rem;
+  background-color: currentColor;
+  transition: transform var(--transition) var(--easing);
+  transform-origin: left;
+  transform: scaleX(0) rotate(0.001deg);
+}
+
+.u_ic.underline_link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1) rotate(0.001deg);
+}
+
 /*============================================================================================
       Header
 =============================================================================================*/
@@ -29,6 +49,7 @@
   background-color: var(--color-blue);
   border-radius: 100rem;
   padding: 0 2.3rem;
+  transition: background-color var(--transition) var(--easing);
 }
 
 .header_nav{
@@ -53,7 +74,6 @@
   height: 100%;
   flex-flow: column;
   grid-auto-columns: 1fr;
-  gap: 16px;
   grid-template-columns: 1fr var(--main-cont) 1fr; 
   grid-template-rows: auto;
 }
@@ -63,17 +83,15 @@
 }
 
 .nav_menu_summary{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
   z-index: 1;
+  min-height: 52.2rem;
   padding: 10rem 4.4rem 10rem 4rem;
   border-radius: 100rem;
   background-color: var(--color-light-gray);
   filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.1 ));
-}
-
-.nav_menu_summary_inr{
-  display: flex;
-  flex-flow: column;
-  gap: 2.7rem;
 }
 
 .nav_search{
@@ -87,6 +105,7 @@
   min-height: 19rem;
   border-radius: 100%;
   background-color: var(--color-blue);
+  transition: background-color var(--transition) var(--easing);
 }
 
 .nav_search_btn.u_ic::before{
@@ -244,31 +263,40 @@
   max-width: 35rem;
 }
 
-.search_checkBox_wrap{
-  padding: 0 3.9rem;
+.search_form{
+  align-items: stretch;
+}
+
+.search_select{
+  position: relative;
 }
 
 .search_selectBox{
+  position: relative;
   padding: 1.8rem 3rem;
   border-radius: 0.4rem;
   color: var(--color-dark-blue);
   background-color: var(--color-reverse);
 }
 
+.search_select.u_ic::after{
+  background-image: url(../img/common/ico_form_dropdown_arrow.svg);
+  background-position: 50% 50%;
+  background-size: contain;
+  inset: auto 3rem auto auto;
+  z-index: 1;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
 .search_selectBox:has(option[value=""]:checked) {
   color: var(--color-placeholder);
 }
 .search_option {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    min-width: 230px;
-    height: 2.8em;
-    padding: .4em 3.6em .4em .8em;
-    border: 2px solid var(--color-blue);
-    border-radius: 3px;
-    color: #333333;
-    cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
 }
 
 .search_checkBox label{
@@ -282,39 +310,53 @@
   border: none;
 }
 
-.search_submit{
-  
+.search_text{
+  padding-top: 1.7rem;
+  width: 100%;
+  position: relative;
 }
 
-input[type="text"].search_text{
+.search_text.u_ic::after{
+  background-image: url(../img/common/ico_form_loupe.svg);
+  background-position: 50% 50%;
+  background-size: contain;
+  inset: auto 3rem auto auto;
+  z-index: 1;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+input[type="text"].search_textBox{
+  color: var(--color-text);
   box-sizing: border-box;
-  padding: 1.8rem 3rem;
+  padding: 1.8rem 4.6rem 1.8rem 3rem;
   border-radius: 100rem;
   background-color: var(--color-reverse);
   font-weight: 500;
 }
 
-input[type="text"].search_text::placeholder{
+input[type="text"].search_textBox::placeholder{
   color: var(--color-placeholder);
 }
 
 input[type="submit"].search_submit{
   padding: 1.5rem 5.6rem;
+  color: var(--color-reverse);
   background-color: var(--color-blue);
   border-radius: 100rem;
   font-weight: 700;
   border: unset;
-  
+  transition: background-color var(--transition) var(--easing), color var(--transition) var(--easing);
 }
 
 /*Job section
 ================================================*/
 .content_job{
-  padding-top:  12.5rem;
+  padding-top:  12rem;
 }
 
-.job_card_wrap{
-  row-gap: 3rem;
+.job_card_wrap{ 
+  padding-top: 5.7rem; /* デザインだと5.7pxになってます */
   column-gap: 3rem;
 }
 
@@ -342,13 +384,13 @@ input[type="submit"].search_submit{
 }
 
 .aboutus_card_inr{
-  padding: 6rem 2rem 3.5rem 2rem;
+  padding: 6rem 2rem;
 }
 
 /*Flow section
 ================================================*/
 .content_flow_inr{
-  padding: 0 1rem 0 2rem;
+  padding-left: 4rem;
 }
 
 .card__flow{
@@ -364,12 +406,12 @@ input[type="submit"].search_submit{
 
 .card__flow_inr.u_ic::before{
   width: 0.5rem;
-  height: 110%;
+  height: 100%;
   background-color: var(--color-blue);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
-  inset: -5% auto auto 0%;
+  inset: 0% auto auto 0%;
 }
 
 .card__flow_inr.u_ic::after{
@@ -379,7 +421,7 @@ input[type="submit"].search_submit{
   background-size: contain;
   width: 1.8rem;
   height: 1.2rem;
-  inset: auto auto -25% 47%;
+  inset: auto auto -4.5rem 47%;
 }
 
 .card__flow_inr.u_ic:last-of-type::after{
@@ -404,6 +446,7 @@ input[type="submit"].search_submit{
   background-color: var(--color-blue);
   border-radius: 100%;
   cursor: pointer;
+  transition: transform var(--transition) var(--easing), background-color var(--transition) var(--easing);
 }
 
 .card_modal_btn.u_ic::before{
@@ -411,8 +454,8 @@ input[type="submit"].search_submit{
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url(../img/interview/interview_plus.svg);
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .card__modal{
@@ -423,12 +466,17 @@ input[type="submit"].search_submit{
 }
 
 .card_modal_inr{
-  padding: 4rem 1rem 0 1rem;
+  padding: 4rem 1rem 6rem 1rem;
 }
 
 .card_interview_img{
   width: 100%;
   height: 23rem;
+  overflow: hidden;
+}
+
+.card_interview_img img{
+  transition: transform var(--transition) var(--easing);
 }
 
 .interview_modal_cont {
@@ -469,18 +517,17 @@ input[type="submit"].search_submit{
 
 .card__faq{
   border-radius: 2rem 0 0 2rem;
-  max-width: 45rem;
 }
 
 .card__faq_inr{
   position: relative;
   padding: 0 2rem 0 4rem;
-  gap: 1.8rem;
+  gap: 1.2rem;
 }
 
 .card__faq_inr.u_ic::before{
   width: 0.5rem;
-  height: 98%;
+  height: 100%;
   background-color: var(--color-blue);
   inset: 0% auto auto 0%;
 }
@@ -501,12 +548,33 @@ input[type="submit"].search_submit{
   background-color: var(--color-green);
 }
 
+.top_return_btn{
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  inset: auto 2rem 2rem auto;
+  background-color: var(--color-light-black);
+  border-radius: 100%;
+  transition: opacity var(--transition) var(--easing);
+}
+
+.top_return_btn.u_ic::before{
+  width: 1.3rem;
+  height: 1.3rem;
+  background-image: url(../img/common/ico_top_return_btn.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .movie_video{
+  display: flex;
+  justify-content: center;
   position: relative;
 }
 
 .movie_video_inr{
-  width: 100%;
+  max-width: 45rem;
   aspect-ratio: 16/9;
 }
 
@@ -517,6 +585,7 @@ input[type="submit"].search_submit{
   aspect-ratio: 1/1;
   border-radius: 100%;
   background-color: var(--color-blue);
+  transition: background-color var(--transition) var(--easing);
 }
 
 .movie_search_btn.u_ic::before{
@@ -537,7 +606,7 @@ input[type="submit"].search_submit{
 }
 
 .movie_modal{
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .content_movie_btm{
@@ -591,32 +660,38 @@ input[type="submit"].search_submit{
   }
 
   .nav_layer_inr {
+    inset: 0 0 auto auto;
     display: flex;
-    width: 25rem;
-    height: 65rem;
-    gap: 3.8rem;
-    justify-content: center;
+    width: fit-content; /* デザイン→246px　fit-contentにする理由は内容をテキストをwrapしないため */
+    height: fit-content;
+    padding: 8rem 2rem 13.2rem 2rem;
     align-items: stretch;
     border-radius: 100rem 0px 100rem 100rem;
     background-color: var(--color-reverse);
   }
 
+  .nav_main{
+    display: none;
+  }
+
   .nav_menu_summary{
+    justify-content: start;
     min-width: 0;
     min-height: 0;
     width: 100%;
     height: auto;
-    padding: 0;
+    padding: 0 2rem;
     background-color: transparent;
   }
 
   .nav_search{
+    display: block;
     order: -1;
   }
 
   .nav_search_btn{
     min-width: 19rem;
-    min-height: auto;
+    min-height: 8rem;
     padding: 1.6rem 0;
     border-radius: 100rem;
     background-color: var(--color-blue);
@@ -654,6 +729,38 @@ input[type="submit"].search_submit{
     min-height: auto;
   }
 }
+
+@media (any-hover: hover) {
+  .nav_search_btn:hover{
+    background-color: var(--color-green);
+  }
+
+  .header_search_btn:hover{
+    background-color: var(--color-green);
+  }
+
+  input[type="submit"].search_submit:hover{
+    color: var(--color-blue);
+    background-color: var(--color-reverse);
+  }
+
+  .movie_search_btn:hover{
+    background-color: var(--color-green);
+  }
+
+  .card__interview:hover .card_modal_btn {
+    transform: rotate(90deg);
+    background-color: var(--color-green);
+  }
+
+  .card__interview:hover .card_interview_img img {
+    transform: scale(1.1);
+  }
+
+  .top_return_btn:hover{
+    opacity: var(--opacity);
+  }
+}
 /*============================================================================================
       Footer
 =============================================================================================*/
@@ -669,6 +776,10 @@ input[type="submit"].search_submit{
 .footer_logo{
   width: 18.1rem;
   height: 5.2rem;
+}
+
+.hitomane_wrap{
+  padding: 2.3rem 0;
 }
 
 @media (max-width: 896px) {

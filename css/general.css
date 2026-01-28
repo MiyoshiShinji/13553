@@ -28,21 +28,22 @@
     justify-content: center;
     background-color: var(--color-light-black);
     border-radius: 100%;
-    padding: 1.5rem 1.3rem;
+    padding: 1.4rem 1.25rem;
     cursor: pointer;
+    transition: opacity var(--transition) var(--easing);
   }
 
   .g_hamb_inr {
     position: relative;
-    width: 1.4rem;
-    height: 1.1rem;
+    width: 1.5rem;
+    height: 1.2rem;
   }
 
   .g_hamb_inr_line {
     position: absolute;
     display: block;
     width: inherit;
-    height: 1px;
+    height: 2px;
     top: 0;
     bottom: 0;
     margin: auto;
@@ -50,6 +51,15 @@
     transition: rotate var(--transition), top var(--transition),
       bottom var(--transition);
     rotate: 0deg;
+  }
+
+  .js_open .g_hamb_inr {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .g_hamb.js_open{
+    padding: 1.1rem;
   }
 
   .g_hamb_inr_line.g_hamb_inr_top {
@@ -77,6 +87,12 @@
 }
 
 @media (max-width: 576px) {
+}
+
+@media (any-hover: hover) {
+  .g_hamb:hover {
+    opacity: var(--opacity);
+  }
 }
 
 /*    Slider
@@ -1173,13 +1189,16 @@
 }
 
 .g_modal_content_inr{
-  width: 65vw;
-  aspect-ratio: 16/9;
+  width: clamp(0px, 100%, 920px);
   position: relative;
-  z-index: 1;
+  background-color: var(--color-reverse);
   padding: 4rem;
   border-radius: 2rem;
-  background-color: var(--color-reverse); 
+}
+
+.g_modal_video{
+  width: 100%;
+  aspect-ratio: 16/9;
 }
   
 
@@ -1201,17 +1220,16 @@
   background-image: url(../img/common/close_ico.svg);
   background-size: contain;
   background-position: 50% 50%;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2.3rem;
+  height: 2.3rem;
 }
 
 
 
 @media (max-width: 896px) {
-  .g_modal_content_inr {
-    width: 100%;
+
+  .g_modal_content_inr{
     padding: 1rem;
-    border-radius: 1rem;
   }
 
   .g_modal_close_btn {

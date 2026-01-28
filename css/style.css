@@ -1215,6 +1215,9 @@ map area {
 .l_gap_28 {
   gap: 2.8rem;
 }
+.l_gap_30{
+  gap: 3.0rem
+}
 .l_gap_32 {
   gap: 3.2rem;
 }
@@ -1247,6 +1250,9 @@ map area {
 }
 .l_gap_72 {
   gap: 7.2rem;
+}
+.l_gap_75{
+  gap: 7.5rem;
 }
 .l_gap_80 {
   gap: 8rem;
@@ -2573,6 +2579,9 @@ map area {
 .px_20 {
   padding: 0 2rem;
 }
+.px_39{
+  padding: 0 3.9rem;
+}
 
 /*-- top --*/
 .pt_0 {
@@ -2602,6 +2611,9 @@ map area {
 .pt_8 {
   padding-top: 0.8rem !important;
 }
+.pt_10{
+  padding-top: 1.0rem !important;
+}
 .pt_12 {
   padding-top: 1.2rem !important;
 }
@@ -2616,6 +2628,9 @@ map area {
 }
 .pt_28 {
   padding-top: 2.8rem !important;
+}
+.pt_30 {
+  padding-top: 3.0rem !important;
 }
 .pt_32 {
   padding-top: 3.2rem !important;
@@ -2650,6 +2665,9 @@ map area {
 .pt_72 {
   padding-top: 7.2rem !important;
 }
+.pt_75{
+  padding-top: 7.5rem !important;
+}
 .pt_80 {
   padding-top: 8rem !important;
 }
@@ -2658,6 +2676,9 @@ map area {
 }
 .pt_96 {
   padding-top: 9.6rem !important;
+}
+.pt_100{
+  padding-top: 10.0rem !important;
 }
 .pt_104 {
   padding-top: 10.4rem !important;

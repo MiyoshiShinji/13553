@@ -13,8 +13,8 @@
   <title>パーソル キャリア | Recruit</title>
 
   <!-- favicon / web clip icon -->
-  <link rel="shortcut icon" href="/miyoshi/img/common/favicon.ico" />
-  <link rel="apple-touch-icon" href="/miyoshi/img/common/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/common/favicon.ico" />
+  <link rel="apple-touch-icon" href="/common/apple-touch-icon.png" />
 
   <!-- OGP -->
   <meta property="og:title" content="" />
@@ -105,7 +105,7 @@
     </div>
     
     <div class="nav_layer js_sldNav l_flex_md l_justifyContentEnd_md l_alignContentStart_md">
-      <div class="nav_layer_inr">
+      <div class="nav_layer_inr l_gap_36">
         <div class="nav_menu l_flex l_alignItemsCenter l_justifyContentCenter">
           <figure class="nav_layer_img_1">
             <img src="img/top/mv_img_1_pc.jpg" alt="弊社トラック">
@@ -115,16 +115,16 @@
             <img src="img/top/mv_img_2_pc.jpg" alt="弊社トラック">
           </figure>
 
-          <div class="nav_menu_summary l_flex l_alignItemsCenter l_justifyContentCenter">
-            <ul class="nav_menu_summary_inr u_fz14 u_bold">
-              <li><a href="#top">トップ</a></li>
-              <li><a href="#search">仕事検索</a></li>
-              <li><a href="#job">職種紹介</a></li>
-              <li><a href="#aboutus">私たちについて</a></li>
-              <li><a href="#flow">配送センターの1日の流れ</a></li>
-              <li><a href="#interview">スタッフインタビュー</a></li>
-              <li><a href="#faq">よくある質問</a></li>
-              <li><a href="#movie">ドライバー募集動画</a></li>
+          <div class="nav_menu_summary l_flex l_alignItemsCenter">
+            <ul class="nav_menu_summary_inr l_flex l_directionColumn l_gap_24 u_fz14 u_bold">
+              <li><a href="#top" class="u_ic underline_link">トップ</a></li>
+              <li><a href="#search" class="u_ic underline_link">仕事検索</a></li>
+              <li><a href="#job" class="u_ic underline_link">職種紹介</a></li>
+              <li><a href="#aboutus" class="u_ic underline_link">私たちについて</a></li>
+              <li><a href="#flow" class="u_ic underline_link">配送センターの1日の流れ</a></li>
+              <li><a href="#interview" class="u_ic underline_link">スタッフインタビュー</a></li>
+              <li><a href="#faq" class="u_ic underline_link">よくある質問</a></li>
+              <li><a href="#movie" class="u_ic underline_link">ドライバー募集動画</a></li>
             </ul>
           </div>
         </div>
@@ -141,7 +141,7 @@
           </figure>
           <a href="#search" class="nav_search_btn u_ic l_flex l_directionColumn u_alignC l_justifyContentCenter l_gap_24 g_c_wh">
             <div class="l_flex l_directionColumn l_alignContentCenter l_gap_6">
-              <div class="u_fz32 u_fz24_md g_en">Search</div>
+              <div class="u_fz32 u_fz24_md u g_en">Search</div>
               <div class="u_fz14 u_bold">仕事検索</div>
             </div>
           </a>
@@ -201,77 +201,82 @@
             <h3 class="g_en">Search</h3>
             <span class="content_detail u_fz16 u_ic u_bold">仕事検索</span>
           </div>
-          <div>
-            <form name="search_form" class=""></form>
-              <div class="l_flex l_directionColumn l_gap_32 u_alignC pt_60">
-                <div class="u_fz16 u_bold g_c_wh">条件に合わせて探す</div>
-                <div class="l_flex l_directionColumn l_alignItemsCenter l_gap_20">
-                  <select name="workplace" class="search_selectBox u_medium u_fz14" id="" required>
-                    <option class="search_option_placeholder" value="">勤務地の都道府県を選択してください</option>
-                    <option class="search_option_placeholder" value="ダミー">ダミー</option>
-                  </select>
-                  <select name="workplace" class="search_selectBox u_medium u_fz14" id="" required>
-                    <option class="search_option_option" value="">職種を選択してください</option>
-                  </select>
+          <form name="search_form" class="search_form l_flex l_directionColumn">
+            <div class="l_flex l_directionColumn u_alignC pt_60">
+              <div class="u_fz16 u_bold g_c_wh">条件に合わせて探す</div>
+
+              <div class="search_select u_ic l_flex l_alignItemsCenter pt_30">
+                <select name="workplace" class="search_selectBox u_medium u_fz14" id="" required>
+                  <option class="search_option_placeholder" value="">勤務地の都道府県を選択してください</option>
+                  <option class="search_option_placeholder" value="ダミー">ダミー</option>
+                </select>
+              </div>
+              <div class="search_select u_ic l_flex l_alignItemsCenter pt_20">
+                <select name="workplace" class="search_selectBox u_medium u_fz14" id="" required>
+                  <option class="search_option_option" value="">職種を選択してください</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="l_flex l_directionColumn u_alignC pt_32 px_39">
+              <div class="u_fz16 u_bold g_c_wh">メリットから探す（複数選択可能）</div>
+
+              <div class="search_checkBox l_flex l_flexWrap l_gap_20 u_fz14 g_c_wh pt_30">
+                <label>
+                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="未経験者歓迎">
+                  未経験者歓迎
+                </label>
+                <label>
+                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="中型自動車免許">
+                  中型自動車免許
+                </label>
+                <label>
+                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="仕分け">
+                  仕分け
+                </label>    
+                <label>
+                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="軽作業">
+                  軽作業
+                </label>   
+                <label>
+                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="Wワーク">
+                  Wワーク
+                </label>   
+                <label>
+                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="夜勤">
+                  夜勤
+                </label>   
+                <label>
+                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="主婦（夫）活躍中">
+                  主婦（夫）活躍中
+                </label>   
+                <label>
+                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="女性活躍中">
+                  女性活躍中
+                </label>   
+                <label>
+                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="シニア活躍中">
+                  シニア活躍中
+                </label>   
+                <label>
+                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="外国人活躍中">
+                  外国人活躍中
+                </label>                                   
+              </div>
+            </div>
+            <div class="l_flex l_directionColumn l_gap_32 l_alignItemsCenter pt_40">
+              <input type="submit" name="search_confirm_btn" value="検索" class="search_submit">
+            </div>
+            <div class="l_flex l_directionColumn u_alignC pt_40">
+              <div class="u_fz16 u_bold g_c_wh">メリットから探す（複数選択可能）</div>
+              <div class="l_flex l_directionColumn l_alignItemsCenter l_gap_40">
+                <div class="search_text u_ic l_flex l_alignItemsCenter">
+                  <input type="text" name="freeword" id="" data-name="" required="" data-valid="string" minlength="0" maxlength="7" placeholder="フリーワード検索　駅名、沿線など" class="search_textBox">
                 </div>
+                <input type="submit" name="search_confirm_btn" value="検索" class="search_submit">
               </div>
-              <div class="search_checkBox_wrap l_flex l_directionColumn l_gap_32 u_alignC pt_32">
-                <div class="u_fz16 u_bold g_c_wh">メリットから探す（複数選択可能）</div>
-                <div class="search_checkBox l_flex l_flexWrap l_gap_20 u_fz14 g_c_wh">
-                  <label>
-                    <input type="checkbox" name="" id="" data-name="" class="search_input" value="未経験者歓迎">
-                    未経験者歓迎
-                  </label>
-                  <label>
-                    <input type="checkbox" name="" id="" data-name="" class="search_input" value="中型自動車免許">
-                    中型自動車免許
-                  </label>
-                  <label>
-                    <input type="checkbox" name="" id="" data-name="" class="search_input" value="仕分け">
-                    仕分け
-                  </label>    
-                  <label>
-                    <input type="checkbox" name="" id="" data-name="" class="search_input" value="軽作業">
-                    軽作業
-                  </label>   
-                  <label>
-                    <input type="checkbox" name="" id="" data-name="" class="search_input" value="Wワーク">
-                    Wワーク
-                  </label>   
-                  <label>
-                    <input type="checkbox" name="" id="" data-name="" class="search_input" value="夜勤">
-                    夜勤
-                  </label>   
-                  <label>
-                    <input type="checkbox" name="" id="" data-name="" class="search_input" value="主婦（夫）活躍中">
-                    主婦（夫）活躍中
-                  </label>   
-                  <label>
-                    <input type="checkbox" name="" id="" data-name="" class="search_input" value="女性活躍中">
-                    女性活躍中
-                  </label>   
-                  <label>
-                    <input type="checkbox" name="" id="" data-name="" class="search_input" value="シニア活躍中">
-                    シニア活躍中
-                  </label>   
-                  <label>
-                    <input type="checkbox" name="" id="" data-name="" class="search_input" value="外国人活躍中">
-                    外国人活躍中
-                  </label>                                   
-                </div>
-              </div>
-              <div class="l_flex l_directionColumn l_gap_32 l_alignItemsCenter pt_32">
-                <input type="submit" name="search_confirm_btn" value="検索" class="search_submit g_c_wh">
-              </div>
-              <div class="l_flex l_directionColumn l_gap_32 l_alignItemsCenter jusr pt_40">
-                <div class="l_flex l_directionColumn l_gap_17">
-                  <div class="u_fz16 u_bold g_c_wh">メリットから探す（複数選択可能）</div>
-                  <input type="text" name="freeword" id="" data-name="" required="" data-valid="string" minlength="0" maxlength="7" placeholder="フリーワード検索　駅名、沿線など" class="search_text">
-                </div>
-                <input type="submit" name="search_confirm_btn" value="検索" class="search_submit g_c_wh">
-              </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
         <div id="job" class="content_job">
           <div class="l_wrap_inr">
@@ -280,7 +285,7 @@
               <span class="content_detail u_fz16 u_ic u_bold">職種紹介</span>
             </div>
 
-            <ul class="job_card_wrap l_grid pt_60">
+            <ul class="job_card_wrap l_grid l_gap_20">
               <li class="g_card card__job l_grid_12 l_grid_md_6 l_grid_sm_12">
                 <figure class="card_img">
                   <img src="img/cards/card_job_1.jpg" alt="">
@@ -338,7 +343,7 @@
             </ul>
           </div>
         </div>
-        <div id="aboutus" class="content_aboutus pt_104">
+        <div id="aboutus" class="content_aboutus pt_100">
           <div class="l_wrap_inr">
             <div class="g_card card__aboutus">
               <figure class="card_img card_img__aboutus">
@@ -370,11 +375,11 @@
           </div>
         </div>
 
-        <div id="flow" class="content_flow pt_104">
+        <div id="flow" class="content_flow pt_100">
           <div class="content_flow_inr l_flex l_directionColumn l_gap_60">
-            <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsStart l_gap_2 px_20">
+            <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsStart l_gap_2">
               <h3 class="g_en">Flow</h3>
-              <span class="content_detail u_fz16 u_ic u_bold">入社後の流れ</span>
+              <span class="content_detail u_fz16 u_ic u_bold">配送センターの1日の流れ</span>
             </div>
 
             <div class="g_card card__flow l_alignSelfEnd pt_60 pb_60">
@@ -408,15 +413,15 @@
           </div>
         </div>
 
-        <div id="interview" class="content_interview pt_104">
+        <div id="interview" class="content_interview pt_100">
           <div class="l_wrap_inr">
             <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsEnd l_gap_2 px_20">
               <h3 class="g_en">Interview</h3>
               <span class="content_detail u_fz16 u_ic u_bold">社員インタビュー</span>
             </div>
 
-            <ul class="l_grid l_gap_32_y pt_60">
-              <li class="g_card card__interview js_modal_open l_grid_12 l_grid_md_6 l_grid_sm_12 l_flex l_directionColumn l_gap_32" data-target="interview_modal_1">
+            <ul class="interview_card_wrap l_grid l_gap_20 pt_10">
+              <li class="g_card card__interview js_modal_open l_grid_12 l_grid_md_6 l_grid_sm_12 l_flex l_directionColumn l_gap_30" data-target="interview_modal_1">
                 <div class="l_flex l_directionColumn l_gap_20">
                   <span class="u_fz20 u_bold">「ドライバーになりたい」<br>という憧れが叶った</span>
                   <span class="u_fz14">冷凍便配送ドライバー<br>Oさん／正社員／2020年入社</span>
@@ -427,7 +432,7 @@
                 <div  class="card_modal_btn u_ic l_flex l_alignItemsCenter l_justifyContentCenter"></div>
               </li>
 
-              <li class="g_card card__interview js_modal_open l_grid_12 l_grid_md_6 l_grid_sm_12 l_flex l_directionColumn l_gap_32" data-target="interview_modal_2">
+              <li class="g_card card__interview js_modal_open l_grid_12 l_grid_md_6 l_grid_sm_12 l_flex l_directionColumn l_gap_30" data-target="interview_modal_2">
                 <div class="l_flex l_directionColumn l_gap_20">
                   <span class="u_fz20 u_bold">10年以上続ける理由は、<br>笑い声と仕事の楽しさ</span>
                   <span class="u_fz14">定温庫内作業スタッフ<br>Mさん／正社員／2012年入社</span>
@@ -438,7 +443,7 @@
                 <div  class="card_modal_btn u_ic l_flex l_alignItemsCenter l_justifyContentCenter"></div>
               </li>
 
-              <li class="g_card card__interview js_modal_open l_grid_12 l_grid_md_6 l_grid_sm_12 l_flex l_directionColumn l_gap_32" data-target="interview_modal_3">
+              <li class="g_card card__interview js_modal_open l_grid_12 l_grid_md_6 l_grid_sm_12 l_flex l_directionColumn l_gap_30" data-target="interview_modal_3">
                 <div class="l_flex l_directionColumn l_gap_20">
                   <span class="u_fz20 u_bold">オンとオフを切り替えやすく、<br>毎日を明るく過ごせる</span>
                   <span class="u_fz14">定温便配送ドライバー<br>Sさん／正社員／2016年入社</span>
@@ -459,7 +464,7 @@
 
                 <div class="g_card card__modal">
                   <figure class="card_interview_img">
-                    <img src="img/cards/card_interview_1.png" alt="">
+                    <img src="img/cards/card_interview_1.jpg" alt="">
                   </figure>
                   
                   <div class="card_modal_inr">
@@ -471,9 +476,9 @@
                     <div class="card_modal_q l_flex l_directionColumn l_gap_32 pt_60">
                       <div class="l_flex l_gap_12">
                         <span class="l_flexNoShrink u_fz20 g_c_blue u_medium g_en">Q.</span>
-                        <h5 class="card_modal_q_ttl u_fz20 u_bold">庫内作業スタッフを選んだ理由を教えてください</h5>
+                        <h5 class="card_modal_q_ttl u_fz20 u_bold">配送ドライバーを選んだ理由を教えてください</h5>
                       </div>
-                      <p>もともとは趣味を楽しみながら気ままに働いていましたが、結婚を考えたときに「安定した収入」という問題に直面しました。そんなとき、知人に紹介してもらったのが現在の仕事です。最初はアルバイトからのスタートでしたが、入社3年目となる2015年に正社員となり、今では主任としてチームをまとめています。転職のきっかけだった収入も大幅に増えましたし、福利厚生も手厚く、生活の不安はなくなりました。何より、仕事中にいろいろなところから笑い声が聞こえるセンターの雰囲気が大好きです。気づけば10年以上働いています。</p>
+                      <p>ダンプカーに乗っていた父の姿に憧れて、「私もトラックのドライバーになりたい」と思っていました。しかし就職先を探していた20歳の頃、母から「運転は大丈夫？」と心配されたこともあり、長い間夢のままになっていたんです。家庭を持ち、子どもが大きくなったタイミングで 「やっぱりドライバーに挑戦したい！」と思い、半年ほど軽トラのドライバーを経験してから、現在に至ります。今は念願のトラックを運転できていることが嬉しいです。入社後に先輩社員が同乗してイチから業務を教えてくれるので、たとえドライバー経験がなくてもしっかりと活躍できるようになれます。</p>
                     </div>
 
                     <div class="card_modal_q l_flex l_directionColumn l_gap_32 pt_60">
@@ -614,7 +619,7 @@
           </div>
         </div>
 
-        <div id="faq" class="content_faq l_flex l_directionColumn pt_104 l_gap_60">
+        <div id="faq" class="content_faq l_flex l_directionColumn pt_100 l_gap_60">
           <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsStart l_gap_2">
             <h3 class="g_en">FAQ</h3>
             <span class="content_detail u_fz16 u_ic u_bold">よくある質問</span>
@@ -652,7 +657,7 @@
 
         <div id="movie" class="content_movie">
           <div class="content_movie_inr">
-            <div class="l_wrap_inr l_flex l_directionColumn l_gap_80">
+            <div class="l_wrap_inr l_flex l_directionColumn l_gap_75">
               <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsEnd px_15 l_gap_2">
                 <h3 class="g_en">Movie</h3>
                 <span class="content_detail u_fz16 u_ic u_bold">ドライバー募集動画</span>
@@ -660,7 +665,7 @@
 
                 <div class="movie_video">
                   <iframe class="movie_video_inr"
-                    src="https://www.youtube.com/embed/dWzRivU8xQQ?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&modestbranding=1"
+                    src="https://www.youtube.com/embed/dWzRivU8xQQ?autoplay=0&mute=1&playsinline=1&controls=0&rel=0&modestbranding=1"
                     frameborder="0"
                     allow="autoplay; encrypted-media"
                     allowfullscreen>
@@ -672,25 +677,28 @@
             <div class="l_flex l_justifyContentCenter">
                 <a href="#search" class="movie_search_btn u_ic l_flex l_directionColumn u_alignC l_justifyContentCenter l_gap_24 g_c_wh">
                   <div class="l_flex l_directionColumn l_alignContentCenter l_gap_6">
-                    <div class="u_fz32 u_fz24_md g_en">Search</div>
+                    <div class="u_fz32 g_en">Search</div>
                     <div class="u_fz14 u_bold">仕事検索</div>
                   </div>
                 </a>
               </div>
           </div>
-          <div class="content_movie_btm">
+          <div class="content_movie_btm u_ic">
+            <a href="#top" class="top_return_btn u_ic l_flex l_alignItemsCenter l_justifyContentCenter"></a>
           </div>
 
           <div id="movie_modal_1" class="g_modal js_modal movie_modal">
             <div class="g_modal_cont_bg js_modal_close"></div>
             <div class="g_modal_content js_modal_close u_ic l_flex l_alignItemsCenter l_justifyContentCenter">
-              <iframe class="g_modal_content_inr"
-                src="https://www.youtube.com/embed/dWzRivU8xQQ?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=dWzRivU8xQQ"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen>
-              </iframe>
-              <div class="g_modal_close_btn u_ic js_modal_close"></div>
+              <div class="g_modal_content_inr">
+                <iframe class="g_modal_video"
+                  src="https://www.youtube.com/embed/dWzRivU8xQQ?autoplay=1&mute=0&playsinline=1&controls=1&rel=0&modestbranding=1&loop=1&playlist=dWzRivU8xQQ"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen>
+                </iframe>
+                <div class="g_modal_close_btn u_ic js_modal_close"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -707,9 +715,9 @@
       </figure>
     </a>
 
-    <div class="l_flex l_directionColumn l_gap_8 u_fz10 u_alignC g_c_wh g_bg_light_black u_bold pt_24 pb_24">
+    <div class="hitomane_wrap l_flex l_directionColumn l_gap_8 u_fz10 u_alignC g_c_wh g_bg_light_black u_bold">
       <span>©日本アクセス</span>
-      <span>powered by HITO-Manager</span>
+      <span>powered by <a href="https://hitomgr.jp/lp/" target="_blank" class="g_link_transp">HITO-Manager</a></span>
     </div>
   </footer>
   <!-- /footer -->
