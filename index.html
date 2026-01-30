@@ -10,29 +10,29 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="Description" content="" />
   <meta name="Keywords" content="" />
-  <title>パーソル キャリア | Recruit</title>
+  <title>【公式】ファミリーマート｜配送ドライバー＆庫内作業スタッフ｜中途・アルバイト採用サイト</title>
 
   <!-- favicon / web clip icon -->
-  <link rel="shortcut icon" href="/common/favicon.ico" />
-  <link rel="apple-touch-icon" href="/common/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/img/common/favicon.ico" />
+  <link rel="apple-touch-icon" href="/img/common/apple-touch-icon.png" />
 
   <!-- OGP -->
-  <meta property="og:title" content="" />
+  <meta property="og:title" content="【公式】ファミリーマート｜配送ドライバー＆庫内作業スタッフ｜中途・アルバイト採用サイト" />
   <meta property="og:type" content="website" />
   <!-- TOPページなら"website"、それ以外なら"article" -->
-  <meta property="og:description" content="" />
+  <meta property="og:description" content="ファミリーマートの配送ドライバー・庫内作業スタッフの採用情報サイトです。勤務地は全国から検索可能。未経験・学生・主婦（夫）の方も活躍中！" />
   <meta property="og:url" content="" />
   <meta property="og:site_name" content="" />
-  <meta property="og:image" content="https://xxxxxx.com/img/common/ogp.png" />
+  <meta property="og:image" content="https://familymart-logi.saiyo-job.jp/img/common/ogp.jpg" />
   <!-- 絶対パスで記述すること／SVGは指定できないので注意 -->
   <!-- ▼ Facebook OGP -->
   <meta property="fb:app_id" content="" />
   <!-- ▲ Facebook OGP -->
   <!-- ▼ Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="https://xxxxxx.com/img/common/ogp.png" />
+  <meta name="twitter:title" content="【公式】ファミリーマート｜配送ドライバー＆庫内作業スタッフ｜中途・アルバイト採用サイト" />
+  <meta name="twitter:description" content="ファミリーマートの配送ドライバー・庫内作業スタッフの採用情報サイトです。勤務地は全国から検索可能。未経験・学生・主婦（夫）の方も活躍中！" />
+  <meta name="twitter:image" content="https://familymart-logi.saiyo-job.jp/img/common/ogp.jpg" />
   <!-- 絶対パスで記述すること／SVGは指定できないので注意 -->
   <!-- ▲ Twitter Card -->
   <!-- /OGP -->
@@ -56,6 +56,7 @@
   <link rel="stylesheet" href="/css/plugin/swiper-bundle.min.css" />
   <link rel="stylesheet" href="/css/general.css" />
   <link rel="stylesheet" href="/css/unique.css" />
+
   <!-- /Load css -->
 
   <!-- jQuery, jQueryUI load from CDN -->
@@ -105,7 +106,7 @@
     </div>
     
     <div class="nav_layer js_sldNav l_flex_md l_justifyContentEnd_md l_alignContentStart_md">
-      <div class="nav_layer_inr l_gap_36">
+      <div class="nav_layer_inr">
         <div class="nav_menu l_flex l_alignItemsCenter l_justifyContentCenter">
           <figure class="nav_layer_img_1">
             <img src="img/top/mv_img_1_pc.jpg" alt="弊社トラック">
@@ -172,7 +173,7 @@
                 </li>
               </ul>
             </div>
-            <div class="swiper-pagination mv_1_slider">
+            <div class="swiper-pagination mv_1_slider-swiper-pagination">
               <div class="mv_1_slider_pagination">
                 <span class="swiper-pagination-bullet"></span>
               </div>
@@ -180,7 +181,7 @@
           </div>
         </div>
 
-        <div class="content_header_ttl l_flex l_directionColumn l_gap_16 pt_60 pb_20">
+        <div class="content_header_ttl l_flex l_directionColumn l_gap_15 pt_60 pb_20">
           <h2>等身大の私で<br>いられる職場</h2>
           <span class="content_header_detail u_fz12">Diversity＆Inclusion！</span>
         </div>
@@ -196,84 +197,224 @@
       </div>
 
       <div class="content_main">
-        <div id="search" class="content_search">
+        <div id="search" class="content_search u_ic">
           <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsCenter l_gap_2">
             <h3 class="g_en">Search</h3>
-            <span class="content_detail u_fz16 u_ic u_bold">仕事検索</span>
+            <span class="content_detail l_flex l_alignItemsCenter u_fz16 u_ic u_bold">仕事検索</span>
           </div>
-          <form name="search_form" class="search_form l_flex l_directionColumn">
+          <form name="condition_search" class="search_form l_flex l_directionColumn">
             <div class="l_flex l_directionColumn u_alignC pt_60">
               <div class="u_fz16 u_bold g_c_wh">条件に合わせて探す</div>
 
               <div class="search_select u_ic l_flex l_alignItemsCenter pt_30">
-                <select name="workplace" class="search_selectBox u_medium u_fz14" id="" required>
-                  <option class="search_option_placeholder" value="">勤務地の都道府県を選択してください</option>
-                  <option class="search_option_placeholder" value="ダミー">ダミー</option>
+                <select name="area" class="search_selectBox u_medium u_fz14">
+                  <option value="">勤務地の都道府県を選択してください</option>
+
+                  <!-- 北海道 -->
+                  <option value="hokkaido">北海道</option>
+
+                  <!-- 東北 -->
+                  <option value="aomori">青森県</option>
+                  <option value="iwate">岩手県</option>
+                  <option value="miyagi">宮城県</option>
+                  <option value="akita">秋田県</option>
+                  <option value="yamagata">山形県</option>
+                  <option value="fukushima">福島県</option>
+
+                  <!-- 関東 -->
+                  <option value="ibaraki">茨城県</option>
+                  <option value="tochigi">栃木県</option>
+                  <option value="gunma">群馬県</option>
+                  <option value="saitama">埼玉県</option>
+                  <option value="chiba">千葉県</option>
+                  <option value="tokyo">東京都</option>
+                  <option value="kanagawa">神奈川県</option>
+
+                  <!-- 東海 -->
+                  <option value="niigata">新潟県</option>
+                  <option value="toyama">富山県</option>
+                  <option value="ishikawa">石川県</option>
+                  <option value="fukuiken">福井県</option>
+                  <option value="yamanashi">山梨県</option>
+                  <option value="nagano">長野県</option>
+
+                  <!-- 東海 -->
+                  <option value="gifu">岐阜県</option>
+                  <option value="shizuoka">静岡県</option>
+                  <option value="aichi">愛知県</option>
+                  <option value="mie">三重県</option>
+
+                  <!-- 関西 -->
+                  <option value="shiga">滋賀県</option>
+                  <option value="kyoto">京都府</option>
+                  <option value="osaka">大阪府</option>
+                  <option value="hyogo">兵庫県</option>
+                  <option value="nara">奈良県</option>
+                  <option value="wakayama">和歌山県</option>
+
+                  <!-- 中国・四国 -->
+                  <option value="tottori">鳥取県</option>
+                  <option value="shimane">島根県</option>
+                  <option value="okayama">岡山県</option>
+                  <option value="hiroshima">広島県</option>
+                  <option value="yamaguchi">山口県</option>
+                  <option value="tokushima">徳島県</option>
+                  <option value="kagawa">香川県</option>
+                  <option value="ehime">愛媛県</option>
+                  <option value="kochi">高知県</option>
+
+                  <!-- 九州・沖縄 -->
+                  <option value="fukuoka">福岡県</option>
+                  <option value="saga">佐賀県</option>
+                  <option value="nagasaki">長崎県</option>
+                  <option value="kumamoto">熊本県</option>
+                  <option value="oita">大分県</option>
+                  <option value="miyazaki">宮崎県</option>
+                  <option value="kagoshima">鹿児島県</option>
+                  <option value="okinawa">沖縄県</option>
                 </select>
               </div>
+
               <div class="search_select u_ic l_flex l_alignItemsCenter pt_20">
-                <select name="workplace" class="search_selectBox u_medium u_fz14" id="" required>
-                  <option class="search_option_option" value="">職種を選択してください</option>
+                <select
+                  name="job"
+                  class="search_selectBox u_medium u_fz14"
+                >
+                  <option value="">職種を選択してください</option>
+                  <option value="ドライバー">配送ドライバー</option>
+                  <option value="倉庫">庫内作業スタッフ</option>
                 </select>
               </div>
 
             </div>
-            <div class="l_flex l_directionColumn u_alignC pt_32 px_39">
+            <div class="l_flex l_directionColumn u_alignC pt_32">
               <div class="u_fz16 u_bold g_c_wh">メリットから探す（複数選択可能）</div>
 
               <div class="search_checkBox l_flex l_flexWrap l_gap_20 u_fz14 g_c_wh pt_30">
+
                 <label>
-                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="未経験者歓迎">
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="未経験者歓迎"
+                  >
                   未経験者歓迎
                 </label>
+
                 <label>
-                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="中型自動車免許">
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="中型自動車免許"
+                  >
                   中型自動車免許
                 </label>
+
                 <label>
-                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="仕分け">
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="仕分け"
+                  >
                   仕分け
-                </label>    
+                </label>
+
                 <label>
-                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="軽作業">
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="軽作業"
+                  >
                   軽作業
-                </label>   
+                </label><br>
+
                 <label>
-                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="Wワーク">
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="Wワーク"
+                  >
                   Wワーク
-                </label>   
+                </label>
+
                 <label>
-                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="夜勤">
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="夜勤"
+                  >
                   夜勤
-                </label>   
+                </label>
+
                 <label>
-                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="主婦（夫）活躍中">
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="主婦（夫）活躍中"
+                  >
                   主婦（夫）活躍中
-                </label>   
+                </label>
+
                 <label>
-                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="女性活躍中">
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="女性活躍中"
+                  >
                   女性活躍中
-                </label>   
+                </label>
+
                 <label>
-                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="シニア活躍中">
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="シニア活躍中"
+                  >
                   シニア活躍中
-                </label>   
+                </label>
+
                 <label>
-                  <input type="checkbox" name="" id="" data-name="" class="search_input" value="外国人活躍中">
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="外国人活躍中"
+                  >
                   外国人活躍中
-                </label>                                   
+                </label>
+
               </div>
             </div>
             <div class="l_flex l_directionColumn l_gap_32 l_alignItemsCenter pt_40">
-              <input type="submit" name="search_confirm_btn" value="検索" class="search_submit">
+              <button type="submit" class="search_submit">
+                検索
+              </button>
             </div>
             <div class="l_flex l_directionColumn u_alignC pt_40">
-              <div class="u_fz16 u_bold g_c_wh">メリットから探す（複数選択可能）</div>
+              <div class="u_fz16 u_bold g_c_wh">フリーワードで探す</div>
+
               <div class="l_flex l_directionColumn l_alignItemsCenter l_gap_40">
                 <div class="search_text u_ic l_flex l_alignItemsCenter">
-                  <input type="text" name="freeword" id="" data-name="" required="" data-valid="string" minlength="0" maxlength="7" placeholder="フリーワード検索　駅名、沿線など" class="search_textBox">
+                  <input
+                    type="text"
+                    name="search_keyword"
+                    placeholder="フリーワード検索　駅名、沿線など"
+                    class="search_textBox"
+                  >
                 </div>
-                <input type="submit" name="search_confirm_btn" value="検索" class="search_submit">
+
+                <button type="submit" class="search_submit">
+                  検索
+                </button>
               </div>
             </div>
           </form>
@@ -420,7 +561,7 @@
               <span class="content_detail u_fz16 u_ic u_bold">社員インタビュー</span>
             </div>
 
-            <ul class="interview_card_wrap l_grid l_gap_20 pt_10">
+            <ul class="interview_card_wrap l_grid l_gap_30 pt_10">
               <li class="g_card card__interview js_modal_open l_grid_12 l_grid_md_6 l_grid_sm_12 l_flex l_directionColumn l_gap_30" data-target="interview_modal_1">
                 <div class="l_flex l_directionColumn l_gap_20">
                   <span class="u_fz20 u_bold">「ドライバーになりたい」<br>という憧れが叶った</span>
@@ -470,7 +611,7 @@
                   <div class="card_modal_inr">
                     <div class="l_flex l_directionColumn l_gap_40">
                       <h4 class="u_fz32">「ドライバーになりたい」という憧れが叶った</h4>
-                      <span>冷凍便配送ドライバー<br>>さん／正社員／2020年入社</span>
+                      <span>冷凍便配送ドライバー<br>Oさん／正社員／2020年入社</span>
                     </div>
 
                     <div class="card_modal_q l_flex l_directionColumn l_gap_32 pt_60">
@@ -486,7 +627,7 @@
                         <span class="l_flexNoShrink u_fz20 g_c_blue u_medium g_en">Q.</span>
                         <h5 class="card_modal_q_ttl u_fz20 u_bold">お仕事の流れとおもしろさを教えてください</h5>
                       </div>
-                      <p>現在は3～8度の冷蔵庫内で、店舗向けの商品を仕分けています。午前はお弁当やお総菜、午後は飲料やヨーグルト、夜間はおでんやデザートなど、時間帯で扱う商品が変わります。商品のバーコードを専用機械で読み取り、表示された個数を箱に入れるといった簡単な作業なので、未経験の方もすぐに始められる仕事です。この仕事の腕の見せどころは、いかに効率よく仕分けるか。仕分けのタイムを計測するので、自分の作業スピードが一目でわかり、短縮する過程はゲーム感覚で楽しめます。個人はもちろん、チームで効率を突き詰めることで会社の利益につながるのもやりがいですね。</p>
+                      <p>出社したらまずは点呼を取り、その後トラックに荷物を積み込みます。ひと段落したら30分の休憩を取って配送に向かいます。前半で12店舗に配送し、30分の休憩を挟んで後半13店舗に配送します。 安全運転が何よりも大切な仕事なので、無事に配送を終えられたときの達成感はとても大きいです！もともと憧れていた仕事でしたが、いざ取り組んでみると想像以上に楽しくて、毎回「今日も頑張ったな」と満足した気持ちで退勤できます。</p>
                     </div>
 
                     <div class="card_modal_q l_flex l_directionColumn l_gap_32 pt_60">
@@ -626,30 +767,30 @@
           </div>
 
           <div class="g_card card__faq l_alignSelfEnd pt_60 pb_60">
-            <ul class="l_flex l_directionColumn l_gap_20">
+            <ul class="l_flex l_directionColumn l_gap_30">
               <li class="card__faq_inr l_flex l_directionColumn u_ic">
-                <div class="u_fz16 u_bold">発注データの受信</div>
-                <p>全国にあるファミリーマートの店舗から各地域の配送センターに商品の発注データが届きます。おむすびやお弁当の発注が多い店舗、お菓子の発注が多い店舗など、内容は店舗によってさまざまです。</p>
+                <div class="card_faq_ttl u_fz16 u_bold">Q.土日は休めますか？</div>
+                <p>毎週必ず休むことは難しい場合もありますが、事前に申請いただければ調整可能です。シフト勤務のため、勤務時間も柔軟に対応します。実際に、家庭と両立している方など、ご自身の都合に合わせて働く方が多くいますので、まずはお気軽にご相談ください。</p>
               </li>
               <li class="card__faq_inr l_flex l_directionColumn u_ic">
-                <div class="u_fz16 u_bold">人員配置</div>
-                <p>入荷する商品の総数に合わせて、配送センターの人員を調整します。特定の日程で負担が偏ることがないように、あらかじめ予測することがポイントです。たとえば年末年始やお盆は商品量が増えることが多いため、普段より多くのメンバーで対応しています。</p>
+                <div class="card_faq_ttl u_fz16 u_bold">Q.未経験でも大丈夫ですか？</div>
+                <p>はい、大丈夫です。入社時研修や運転研修が充実しているほか、運転免許や各種資格の取得支援をしているセンターも多く、未経験から安心してスタートできます。センターにもよりますが、全体の約8～9割が未経験入社です。元介護士や元販売スタッフなど、多様なキャリアの方が活躍しています。</p>
               </li>
               <li class="card__faq_inr l_flex l_directionColumn u_ic">
-                <div class="u_fz16 u_bold">商品の入荷</div>
-                <p>メーカーに発注した商品が配送センターに届きます。発注数に対してすべての商品が正しく入荷されているかどうかを丁寧に確認しながら、この後の仕分けや出荷作業をスムーズに進められるように準備します。</p>
+                <div class="card_faq_ttl u_fz16 u_bold">Q.女性も活躍していますか？</div>
+                <p>もちろん活躍しています。1日の作業がルーティン化されていることから仕事も覚えやすく、特に庫内作業スタッフは女性の割合が高いです。ドライバーについても業務マニュアルを整備しています。また、長時間連続の運転がないため身体への負担も少なく、現在も女性ドライバーが活躍中です。</p>
               </li>
               <li class="card__faq_inr l_flex l_directionColumn u_ic">
-                <div class="u_fz16 u_bold">商品の仕分け</div>
-                <p>出荷指示書と呼ばれる「ピッキングリスト」を元に商品の数量を確認し、仕分けていきます。専用の機械でバーコードを読み取ると作業指示が表示されるようになっており、知識や経験がなくても迷うことなく取り組めます。</p>
+                <div class="card_faq_ttl u_fz16 u_bold">Q.どの年代が多く活躍していますか？</div>
+                <p>10～20代の若手はもちろん、40～50代のベテラン層まで、幅広い年代が活躍中です。センターにもよりますが、高校生をはじめとする10代の庫内作業スタッフが多数活躍する職場や、40～50代のドライバーが中心の職場などもあります。</p>
               </li>
               <li class="card__faq_inr l_flex l_directionColumn u_ic">
-                <div class="u_fz16 u_bold">商品の積み込み</div>
-                <p>仕分けた商品を台車に乗せ、商品数に間違いがないかバーコードで確認し、トラックへ積み込みます。効率的に進められるように、最初に配送する店舗の商品は扉付近へ、最後に回る店舗は奥へ積み込むなど、降ろす順番を考えて並べることも重要です。</p>
+                <div class="card_faq_ttl u_fz16 u_bold">Q.普通免許しかありませんが、<br>ドライバーに応募できますか？</div>
+                <p>平成29年（2017年）3月11日以前に取得された免許であれば、そのまま対応可能です。AT限定の場合も、センターによっては活躍いただける可能性があります。また、必要な免許を会社負担で取得できる場合があるので、まずはお気軽にご応募ください。入社後は約2週間、ベテランドライバーがマンツーマンで指導しますので、運転に自信がない方も安心してスタートできます。</p>
               </li>
               <li class="card__faq_inr l_flex l_directionColumn u_ic">
-                <div class="u_fz16 u_bold">全国の店舗へ配送</div>
-                <p>積み込んだ商品をファミリーマートの各店舗へ届けます。安全運転を心掛け、トラックいっぱいの商品をすべて納品し終えたときの達成感は格別です。ファミリーマートの店舗スタッフから「ありがとう」と声をかけてもらえることもあります。</p>
+                <div class="u_fz16 u_bold">Q.入社後にどんな資格が取れますか？</div>
+                <p>職種によって異なりますが、運行管理者、整備管理者、衛生管理者など、さまざまな資格を取得するチャンスがあります。センターによっては資格試験の費用支援や、取得後に資格手当を支給する場合もあり、収入アップにつながります。実際に入社時点では運転免許しか持っていなかった方も、働きながら複数の資格を取得し、手に職をつけています。</p>
               </li>
             </ul>
           </div>
@@ -692,9 +833,10 @@
             <div class="g_modal_content js_modal_close u_ic l_flex l_alignItemsCenter l_justifyContentCenter">
               <div class="g_modal_content_inr">
                 <iframe class="g_modal_video"
-                  src="https://www.youtube.com/embed/dWzRivU8xQQ?autoplay=1&mute=0&playsinline=1&controls=1&rel=0&modestbranding=1&loop=1&playlist=dWzRivU8xQQ"
+                data-src="https://www.youtube.com/embed/dWzRivU8xQQ?autoplay=0&mute=0&playsinline=1&controls=1&rel=0&modestbranding=1&loop=1&playlist=dWzRivU8xQQ"
+                  src="""
                   frameborder="0"
-                  allow="autoplay; encrypted-media"
+                  allow="encrypted-media"
                   allowfullscreen>
                 </iframe>
                 <div class="g_modal_close_btn u_ic js_modal_close"></div>
@@ -737,34 +879,8 @@
   <script src="/js/plugin/jquery.matchHeight.js"></script>
   <script src="/js/plugin/swiper-bundle.min.js"></script>
   <script src="/js/common.js"></script>
-
-<!--   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
-  <script>
-  const lenis = new Lenis({
-    duration: 1.7,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou 
-    direction: 'vertical', // vertical, horizontal 
-    gestureDirection: 'vertical', // vertical, horizontal, both 
-    smooth: true,
-    mouseMultiplier: 1,
-    smoothTouch: false,
-    touchMultiplier: 2,
-    infinite: false,
-  })
-
-  //get scroll value 
-  lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-    /* console.log({ scroll, limit, velocity, direction, progress }) */
-  })
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf) 
-</script> -->
+  <script src="/js/hitomgr_common.js"></script>
   <!-- /Load JavaScript -->
 </body>
 
-</html>
+</html

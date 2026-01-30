@@ -13,6 +13,7 @@ $(function () {
 		mv1Slider();
 		/* FadeIn(); */
 		Modal();
+		modalVideo();
 		/* Loading(); */
 		/* AfterLoad(); */
 		/* Gdpr(); */
@@ -206,10 +207,10 @@ $(function () {
 			spaceBetween: 0,
 			// effect: "fade",
 			speed: 1500,
-			navigation: {
+			/* navigation: {
 				nextEl: ".js_slider_arrow__next",
 				prevEl: ".js_slider_arrow__prev",
-			},
+			}, */
 			pagination: {
 				el: ".mv_1_slider_pagination",
 				clickable: true,
@@ -268,6 +269,58 @@ function Modal() {
 
 $(document).ready(function() {
   Modal();
+});
+
+
+	/* モーダル　ビデオ版
+	=====================================================*/
+function modalVideo() {
+  $(".js_modal_open").on("click", function () {
+    var target = $(this).data("target");
+    var $modal = $("#" + target);
+
+    // inject iframe src (start video)
+    var $iframe = $modal.find(".g_modal_video");
+    var src = $iframe.data("src");
+    $iframe.attr("src", src);
+
+    $modal.fadeIn();
+    return false;
+  });
+
+  $(".js_modal_close").on("click", function () {
+    var $modal = $(this).closest(".js_modal");
+
+    // stop video
+    var $iframe = $modal.find(".g_modal_video");
+    $iframe.attr("src", "");
+
+    $modal.fadeOut();
+    return false;
+  });
+}
+
+$(document).ready(function () {
+  modalVideo();
+});
+
+function formColorStyle() {
+	document.querySelectorAll('.search_selectBox').forEach(select => {
+		const updateState = () => {
+			if (select.value === '') {
+				select.classList.add('is-placeholder');
+			} else {
+				select.classList.remove('is-placeholder');
+			}
+		};
+
+		updateState(); // initial state
+		select.addEventListener('change', updateState);
+	});
+}
+
+$(document).ready(function () {
+  formColorStyle();
 });
 
 	/* ローディング

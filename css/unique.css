@@ -27,7 +27,7 @@
 =============================================================================================*/
 .header {
   position: fixed;
-  z-index: 1; /* Default: Is under both content and nav so NEED to have Z-index */
+  z-index: 2; /* Default: Is under both content and nav so NEED to have Z-index */
   inset: 0% auto auto 0%;
   padding: 3.5rem 5rem;
 }
@@ -104,6 +104,7 @@
   min-width: 19rem;
   min-height: 19rem;
   border-radius: 100%;
+  border: 6px solid transparent;
   background-color: var(--color-blue);
   transition: background-color var(--transition) var(--easing);
 }
@@ -111,6 +112,15 @@
 .nav_search_btn.u_ic::before{
   content: "";
   background-image: url(../img/common/lens_ico.svg);
+  width: 1.6rem;
+  height: 1.6rem;
+  inset: auto 45% 16% auto;
+}
+
+.nav_search_btn.u_ic::after{
+  content: "";
+  background-image: url(../img/common/lens_ico_blue.svg);
+  opacity: 0;
   width: 1.6rem;
   height: 1.6rem;
   inset: auto 45% 16% auto;
@@ -128,8 +138,8 @@
 
 .content_main{
   background-image: url(../img/common/content_b_background_sp.svg);
-  background-position: 50% 0%;
-  background-size: cover;
+  background-position: 50% 50%;
+  background-size: contain;
   background-repeat: repeat-y;
 }
 
@@ -194,8 +204,8 @@
   margin-right: unset;
 }
 
-.swiper-pagination.mv_1_slider{
-  inset: auto auto -2rem 0rem;
+.swiper-pagination.mv_1_slider-swiper-pagination{
+  inset: auto auto -2.5rem 0rem;
 }
 
 .swiper-pagination-bullet{
@@ -250,6 +260,8 @@
   background-color: var(--color-blue);
 }
 
+
+
 /*Search section
 ================================================*/
 .content_search{
@@ -257,6 +269,15 @@
   border-radius: 100rem;
   padding: 12rem 2rem;
   max-width: 39rem;
+}
+
+.content_search.u_ic::before{
+  inset: -3rem auto auto 5rem;
+  background-image: url(../img/search/search_deco.svg);
+  background-position: 50% 50%;
+  background-size: contain;
+  width: 8.16rem;
+  height: 9.77rem;
 }
 
 .content_search_inr{
@@ -289,7 +310,19 @@
   height: 1.3rem;
 }
 
-.search_selectBox:has(option[value=""]:checked) {
+.search_selectBox {
+  color: var(--color-text);
+}
+
+.search_selectBox.is-placeholder {
+  color: var(--color-placeholder);
+}
+
+.search_selectBox option {
+  color: var(--color-text);
+}
+
+.search_selectBox option[value=""] {
   color: var(--color-placeholder);
 }
 .search_option {
@@ -297,6 +330,10 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
+}
+
+.search_checkBox{
+  padding: 0rem 3.9rem;
 }
 
 .search_checkBox label{
@@ -339,7 +376,7 @@ input[type="text"].search_textBox::placeholder{
   color: var(--color-placeholder);
 }
 
-input[type="submit"].search_submit{
+.search_submit{
   padding: 1.5rem 5.6rem;
   color: var(--color-reverse);
   background-color: var(--color-blue);
@@ -349,6 +386,8 @@ input[type="submit"].search_submit{
   transition: background-color var(--transition) var(--easing), color var(--transition) var(--easing);
 }
 
+
+
 /*Job section
 ================================================*/
 .content_job{
@@ -356,7 +395,7 @@ input[type="submit"].search_submit{
 }
 
 .job_card_wrap{ 
-  padding-top: 5.7rem; /* デザインだと5.7pxになってます */
+  padding-top: 5.7rem;
   column-gap: 3rem;
 }
 
@@ -377,6 +416,9 @@ input[type="submit"].search_submit{
   padding: 4rem 2rem 4rem 2rem;
 }
 
+
+
+
 /*About Us section
 ================================================*/
 .card__aboutus{
@@ -386,6 +428,10 @@ input[type="submit"].search_submit{
 .aboutus_card_inr{
   padding: 6rem 2rem;
 }
+
+
+
+
 
 /*Flow section
 ================================================*/
@@ -428,6 +474,9 @@ input[type="submit"].search_submit{
   content: none;
 }
 
+
+
+
 /*Interview section
 ================================================*/
 .card__interview{
@@ -450,10 +499,20 @@ input[type="submit"].search_submit{
 }
 
 .card_modal_btn.u_ic::before{
+  z-index: 1;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url(../img/interview/interview_plus.svg);
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.card_modal_btn.u_ic::after{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url(../img/interview/interview_plus_blue.svg);
   width: 1.6rem;
   height: 1.6rem;
 }
@@ -503,11 +562,16 @@ input[type="submit"].search_submit{
 
 .interview_modal_close_btn{
   position: absolute;
-  inset: -2.8rem 0.7rem auto auto;
-  background-image: url(../img/common/close_ico.svg);
-  width: 2.2rem;
-  height: 2.2rem;
+  inset: -3.8rem 0.7rem auto auto;
+  background-image: url(../img/interview/close_ico.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 3.1rem;
+  height: 3.1rem;
 } 
+
+
+
 
 /*FAQ section
 ================================================*/
@@ -517,12 +581,17 @@ input[type="submit"].search_submit{
 
 .card__faq{
   border-radius: 2rem 0 0 2rem;
+  max-width: 73.6rem;
+}
+
+.card_faq_ttl{
+  line-height: 1.6;
 }
 
 .card__faq_inr{
   position: relative;
   padding: 0 2rem 0 4rem;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .card__faq_inr.u_ic::before{
@@ -531,6 +600,9 @@ input[type="submit"].search_submit{
   background-color: var(--color-blue);
   inset: 0% auto auto 0%;
 }
+
+
+
 
 /*Movie section
 ================================================*/
@@ -584,13 +656,25 @@ input[type="submit"].search_submit{
   min-width: 19rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
+  border: 3px solid transparent;
   background-color: var(--color-blue);
   transition: background-color var(--transition) var(--easing);
 }
 
 .movie_search_btn.u_ic::before{
   content: "";
+  z-index: 1;
   background-image: url(../img/common/lens_ico.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.6rem;
+  height: 1.6rem;
+  inset: auto 45% 16% auto;
+}
+
+.movie_search_btn.u_ic::after{
+  content: "";
+  background-image: url(../img/common/lens_ico_blue.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 1.6rem;
@@ -610,7 +694,7 @@ input[type="submit"].search_submit{
 }
 
 .content_movie_btm{
-  height: 30rem;
+  min-height: 29rem;
 }
 
 
@@ -644,7 +728,7 @@ input[type="submit"].search_submit{
     position: fixed;
     z-index: 10;
     inset: 0% 0% auto auto;
-    padding: 1rem 2rem;
+    padding: 1rem;
   }
 
   .nav_layer{
@@ -662,6 +746,7 @@ input[type="submit"].search_submit{
   .nav_layer_inr {
     inset: 0 0 auto auto;
     display: flex;
+    gap: 3.6rem;
     width: fit-content; /* デザイン→246px　fit-contentにする理由は内容をテキストをwrapしないため */
     height: fit-content;
     padding: 8rem 2rem 13.2rem 2rem;
@@ -704,6 +789,14 @@ input[type="submit"].search_submit{
     inset: 40% auto auto 3rem;
   }
 
+  .nav_search_btn.u_ic::after{
+    background-image: url(../img/common/lens_ico.svg);
+    opacity: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    inset: 40% auto auto 3rem;
+  }
+
   .content_layer {
     max-width: 100%;
   }
@@ -731,27 +824,38 @@ input[type="submit"].search_submit{
 }
 
 @media (any-hover: hover) {
-  .nav_search_btn:hover{
-    background-color: var(--color-green);
-  }
-
-  .header_search_btn:hover{
-    background-color: var(--color-green);
-  }
-
-  input[type="submit"].search_submit:hover{
+  .search_submit:hover{
     color: var(--color-blue);
     background-color: var(--color-reverse);
   }
 
+  .nav_search_btn:hover{
+    color: var(--color-blue);
+    background-color: var(--color-reverse);
+    border: 6px solid var(--color-blue);
+  }
+  .nav_search_btn.u_ic:hover::after {
+    opacity: 1;
+  }
+
   .movie_search_btn:hover{
-    background-color: var(--color-green);
+    color: var(--color-blue);
+    background-color: var(--color-reverse);
+    border: 6px solid var(--color-blue);
+  }
+  .movie_search_btn.u_ic:hover::before {
+    opacity: 0;
   }
 
   .card__interview:hover .card_modal_btn {
     transform: rotate(90deg);
-    background-color: var(--color-green);
+    background-color: var(--color-reverse);
   }
+
+  .card__interview:hover .card_modal_btn::before {
+    opacity: 0;
+  }
+
 
   .card__interview:hover .card_interview_img img {
     transform: scale(1.1);
@@ -760,6 +864,19 @@ input[type="submit"].search_submit{
   .top_return_btn:hover{
     opacity: var(--opacity);
   }
+
+  @media (max-width: 896px) {
+  .nav_search_btn:hover{
+    color: var(--color-reverse);
+    background-color: var(--color-blue);
+    border: 6px solid transparent;
+  }
+
+  .nav_search_btn.u_ic:hover::before {
+    opacity: 1;
+  }
+}
+
 }
 /*============================================================================================
       Footer

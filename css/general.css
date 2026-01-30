@@ -90,9 +90,6 @@
 }
 
 @media (any-hover: hover) {
-  .g_hamb:hover {
-    opacity: var(--opacity);
-  }
 }
 
 /*    Slider
@@ -1204,24 +1201,26 @@
 
 .g_modal_close_btn {
   position: absolute;
-  inset: -7rem 0 auto auto;
-  width: 5rem;
-  height: 5rem;
+  inset: -7.5rem 0 auto auto;
+  width: 6rem;
+  height: 6rem;
   background-color: var(--color-blue);
   border-radius: 100%;
   cursor: pointer;
 
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+
+  transition: background-color var(--transition) var(--easing);
 }
 
 .g_modal_close_btn.u_ic::before {
   background-image: url(../img/common/close_ico.svg);
   background-size: contain;
   background-position: 50% 50%;
-  width: 2.3rem;
-  height: 2.3rem;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 
@@ -1239,12 +1238,15 @@
   }
 
   .g_modal_close_btn.u_ic::before {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.2rem;
+    height: 1.2rem;
   }
 }
 
 @media (max-width: 576px) {
+}
+
+@media (any-hover: hover) {
 }
 
 /*    Table Parts
