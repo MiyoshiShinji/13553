@@ -117,15 +117,15 @@
           </figure>
 
           <div class="nav_menu_summary l_flex l_alignItemsCenter">
-            <ul class="nav_menu_summary_inr l_flex l_directionColumn l_gap_24 u_fz14 u_bold">
-              <li><a href="#top" class="u_ic underline_link">トップ</a></li>
-              <li><a href="#search" class="u_ic underline_link">仕事検索</a></li>
-              <li><a href="#job" class="u_ic underline_link">職種紹介</a></li>
-              <li><a href="#aboutus" class="u_ic underline_link">私たちについて</a></li>
-              <li><a href="#flow" class="u_ic underline_link">配送センターの1日の流れ</a></li>
-              <li><a href="#interview" class="u_ic underline_link">スタッフインタビュー</a></li>
-              <li><a href="#faq" class="u_ic underline_link">よくある質問</a></li>
-              <li><a href="#movie" class="u_ic underline_link">ドライバー募集動画</a></li>
+            <ul class="nav_menu_summary_inr l_flex l_directionColumn l_alignItemsStart l_gap_24 u_fz14 u_bold">
+              <li class="u_ic"><a href="#top">トップ</a></li>
+              <li class="u_ic"><a href="#search">仕事検索</a></li>
+              <li class="u_ic"><a href="#job">職種紹介</a></li>
+              <li class="u_ic"><a href="#aboutus">私たちについて</a></li>
+              <li class="u_ic"><a href="#flow">配送センターの1日の流れ</a></li>
+              <li class="u_ic"><a href="#interview">スタッフインタビュー</a></li>
+              <li class="u_ic"><a href="#faq">よくある質問</a></li>
+              <li class="u_ic"><a href="#movie">ドライバー募集動画</a></li>
             </ul>
           </div>
         </div>
@@ -297,7 +297,7 @@
                     type="checkbox"
                     name="merit"
                     class="search_input"
-                    value="未経験者歓迎"
+                    value="未経験"
                   >
                   未経験者歓迎
                 </label>
@@ -307,9 +307,39 @@
                     type="checkbox"
                     name="merit"
                     class="search_input"
-                    value="中型自動車免許"
+                    value="中型"
                   >
                   中型自動車免許
+                </label>
+
+                <label>
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="急募"
+                  >
+                  急募
+                </label>
+
+                <label>
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="寮"
+                  >
+                  寮完備
+                </label>
+
+                <label>
+                  <input
+                    type="checkbox"
+                    name="merit"
+                    class="search_input"
+                    value="特典諸手当"
+                  >
+                  特典・諸手当充実
                 </label>
 
                 <label>
@@ -330,7 +360,7 @@
                     value="軽作業"
                   >
                   軽作業
-                </label><br>
+                </label>
 
                 <label>
                   <input
@@ -357,7 +387,7 @@
                     type="checkbox"
                     name="merit"
                     class="search_input"
-                    value="主婦（夫）活躍中"
+                    value="主婦（夫）"
                   >
                   主婦（夫）活躍中
                 </label>
@@ -377,7 +407,7 @@
                     type="checkbox"
                     name="merit"
                     class="search_input"
-                    value="シニア活躍中"
+                    value="シニア歓迎"
                   >
                   シニア活躍中
                 </label>
@@ -407,7 +437,7 @@
                   <input
                     type="text"
                     name="search_keyword"
-                    placeholder="フリーワード検索　駅名、沿線など"
+                    placeholder="フリーワード検索　駅名、職種など"
                     class="search_textBox"
                   >
                 </div>
@@ -474,7 +504,7 @@
               </li>
               <li class="g_card card__job l_grid_12 l_grid_md_6 l_grid_sm_12">
                 <figure class="card_img">
-                  <img src="img/cards/card_job_6.png" alt="">
+                  <img src="img/cards/card_job_6.jpg" alt="">
                 </figure>
                 <div class="job_card_inr l_flex l_directionColumn l_gap_20">
                   <h4>冷凍庫内作業スタッフ</h4>
@@ -487,9 +517,19 @@
         <div id="aboutus" class="content_aboutus pt_100">
           <div class="l_wrap_inr">
             <div class="g_card card__aboutus">
-              <figure class="card_img card_img__aboutus">
-                <img src="img/cards/card_aboutus_1.png" alt="">
-              </figure>
+
+
+              <picture class="card_img card_img__aboutus">
+                <source
+                  srcset="img/cards/card_aboutus_1.png"
+                  media="(min-width: 577px) and (max-width: 896px)"
+                >
+                <img src="img/cards/card_aboutus_1.jpg" alt="">
+              </picture>
+
+              <!-- <figure class="card_img card_img__aboutus">
+                <img src="img/cards/card_aboutus_1.jpg" alt="">
+              </figure> -->
 
               <div class="aboutus_card_inr l_flex l_directionColumn l_gap_60">
                 <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsStart l_gap_2">
@@ -558,7 +598,7 @@
           <div class="l_wrap_inr">
             <div class="content_ttl_wrap l_flex l_directionColumn l_alignItemsEnd l_gap_2 px_20">
               <h3 class="g_en">Interview</h3>
-              <span class="content_detail u_fz16 u_ic u_bold">社員インタビュー</span>
+              <span class="content_detail u_fz16 u_ic u_bold">スタッフインタビュー</span>
             </div>
 
             <ul class="interview_card_wrap l_grid l_gap_30 pt_10">
@@ -665,7 +705,7 @@
                   <div class="card_modal_inr">
                     <div class="l_flex l_directionColumn l_gap_40">
                       <h4 class="u_fz32">10年以上続ける理由は、笑い声と仕事の楽しさ</h4>
-                      <span>定温庫内作業スタッフ<br>>Mさん／正社員／2012年入社</span>
+                      <span>定温庫内作業スタッフ<br>Mさん／正社員／2012年入社</span>
                     </div>
 
                     <div class="card_modal_q l_flex l_directionColumn l_gap_32 pt_60">
@@ -719,7 +759,7 @@
                   <div class="card_modal_inr">
                     <div class="l_flex l_directionColumn l_gap_40">
                       <h4 class="u_fz32">オンとオフを切り替えやすく、毎日を明るく過ごせる</h4>
-                      <span>定温便配送ドライバー<br>>Sさん／正社員／2016年入社</span>
+                      <span>定温便配送ドライバー<br>Sさん／正社員／2016年入社</span>
                     </div>
 
                     <div class="card_modal_q l_flex l_directionColumn l_gap_32 pt_60">

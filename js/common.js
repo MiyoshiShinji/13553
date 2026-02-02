@@ -254,9 +254,7 @@ $(function () {
 function Modal() {
   $(".js_modal_open").on("click", function () {
     var target = $(this).data("target");
-    console.log("target:", target); // デバッグ用
     var modal = document.getElementById(target);
-    console.log("modal:", modal); // デバッグ用
     $(modal).fadeIn();
     return false;
   });
@@ -279,7 +277,6 @@ function modalVideo() {
     var target = $(this).data("target");
     var $modal = $("#" + target);
 
-    // inject iframe src (start video)
     var $iframe = $modal.find(".g_modal_video");
     var src = $iframe.data("src");
     $iframe.attr("src", src);

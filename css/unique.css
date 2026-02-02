@@ -2,26 +2,6 @@
 
 @import "settings.css";
 
-/*    リンクアンダーライン　アニメーション
-=====================================================*/
-.u_ic.underline_link::before{
-  content: "";
-  position: absolute;
-  bottom: -0.3rem;
-  left: 0;
-  width: 100%;
-  height: 0.15rem;
-  background-color: currentColor;
-  transition: transform var(--transition) var(--easing);
-  transform-origin: left;
-  transform: scaleX(0) rotate(0.001deg);
-}
-
-.u_ic.underline_link:hover::before {
-  transform-origin: left;
-  transform: scaleX(1) rotate(0.001deg);
-}
-
 /*============================================================================================
       Header
 =============================================================================================*/
@@ -94,6 +74,16 @@
   filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.1 ));
 }
 
+.nav_menu_summary li.u_ic:before{
+  inset: 0.5rem auto auto -1.8rem;
+  width: 0.7rem;
+  aspect-ratio: 1/1;
+  background-color: var(--color-blue);
+  border-radius: 100%;
+  opacity: 0;
+  transition: opacity var(--transition) var(--easing);
+}
+
 .nav_search{
   display: flex;
   justify-content: center;
@@ -138,7 +128,7 @@
 
 .content_main{
   background-image: url(../img/common/content_b_background_sp.svg);
-  background-position: 50% 50%;
+  background-position: 0% 0%;
   background-size: contain;
   background-repeat: repeat-y;
 }
@@ -182,8 +172,8 @@
   padding: 15rem 2rem 9.5rem 2rem;
   background-image: url(../img/common/content_a_background_sp.svg);
   background-color: var(--color-reverse);
-  background-position: 50% 0%;
-  background-size: contain;
+  background-position: 0% 0%;
+  background-size: cover;
   background-repeat: repeat-y;
 }
 
@@ -240,7 +230,7 @@
 
 .content_header_mv_img > :last-child{
   position: relative;
-  top: -4rem;
+  top: -5rem;
 }
 
 .content_detail{
@@ -333,12 +323,25 @@
 }
 
 .search_checkBox{
-  padding: 0rem 3.9rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 2rem;
+  column-gap: 0.5rem;
+  padding: 0rem 1.8rem;
 }
 
 .search_checkBox label{
   display: flex;
-  align-items: center;
+  gap: 1rem;
+  align-items: start;
+  text-align: start;
+  line-height: 1.7;
+}
+
+.search_checkBox label input{
+  position: relative;
+  top: 0.5rem;
+  margin: 0;
 }
 
 .search_input{
@@ -409,6 +412,7 @@ input[type="text"].search_textBox::placeholder{
 }
 
 .card_img.card_img__aboutus{
+  display: block;
   height: 26rem;
 }
 
@@ -495,24 +499,14 @@ input[type="text"].search_textBox::placeholder{
   background-color: var(--color-blue);
   border-radius: 100%;
   cursor: pointer;
-  transition: transform var(--transition) var(--easing), background-color var(--transition) var(--easing);
+  transition: background-color var(--transition) var(--easing);
 }
 
 .card_modal_btn.u_ic::before{
-  z-index: 1;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url(../img/interview/interview_plus.svg);
-  width: 1.6rem;
-  height: 1.6rem;
-}
-
-.card_modal_btn.u_ic::after{
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-image: url(../img/interview/interview_plus_blue.svg);
   width: 1.6rem;
   height: 1.6rem;
 }
@@ -656,7 +650,6 @@ input[type="text"].search_textBox::placeholder{
   min-width: 19rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
-  border: 3px solid transparent;
   background-color: var(--color-blue);
   transition: background-color var(--transition) var(--easing);
 }
@@ -743,6 +736,10 @@ input[type="text"].search_textBox::placeholder{
     z-index: 2;
   }
 
+  .card_img.card_img__aboutus{
+    height: 32rem;
+  }
+
   .nav_layer_inr {
     inset: 0 0 auto auto;
     display: flex;
@@ -789,14 +786,6 @@ input[type="text"].search_textBox::placeholder{
     inset: 40% auto auto 3rem;
   }
 
-  .nav_search_btn.u_ic::after{
-    background-image: url(../img/common/lens_ico.svg);
-    opacity: 0;
-    width: 1.6rem;
-    height: 1.6rem;
-    inset: 40% auto auto 3rem;
-  }
-
   .content_layer {
     max-width: 100%;
   }
@@ -821,39 +810,31 @@ input[type="text"].search_textBox::placeholder{
   .content_header{
     min-height: auto;
   }
+
+  .card_img.card_img__aboutus{
+    height: 26rem;
+  }
 }
 
-@media (any-hover: hover) {
-  .search_submit:hover{
-    color: var(--color-blue);
-    background-color: var(--color-reverse);
+.search_submit:hover{
+    background-color: var(--color-yellow);
   }
 
+@media (any-hover: hover) {
   .nav_search_btn:hover{
-    color: var(--color-blue);
-    background-color: var(--color-reverse);
-    border: 6px solid var(--color-blue);
-  }
-  .nav_search_btn.u_ic:hover::after {
-    opacity: 1;
+    background-color: var(--color-green);
   }
 
   .movie_search_btn:hover{
     color: var(--color-blue);
     background-color: var(--color-reverse);
-    border: 6px solid var(--color-blue);
   }
   .movie_search_btn.u_ic:hover::before {
     opacity: 0;
   }
 
   .card__interview:hover .card_modal_btn {
-    transform: rotate(90deg);
-    background-color: var(--color-reverse);
-  }
-
-  .card__interview:hover .card_modal_btn::before {
-    opacity: 0;
+    background-color: var(--color-green);
   }
 
 
@@ -863,6 +844,10 @@ input[type="text"].search_textBox::placeholder{
 
   .top_return_btn:hover{
     opacity: var(--opacity);
+  }
+
+  .nav_menu_summary li.u_ic:hover::before {
+    opacity: 1;
   }
 
   @media (max-width: 896px) {

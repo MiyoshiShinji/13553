@@ -73,42 +73,63 @@ function hitomgr() {
 
     // =========================
     // KEYWORDS (sk)
+    // 職種 + メリット（複数）
     // =========================
     let skValues = [];
 
-    // select 職種
+    // 職種
     form.querySelectorAll('select[name="job"]').forEach(select => {
-      if (select.value) skValues.push(select.value);
+      if (select.value) {
+        skValues.push(select.value);
+      }
     });
 
-    // checkbox
+    // メリット（checkbox → sk）
     form.querySelectorAll('input[type="checkbox"][name="merit"]:checked')
-      .forEach(cb => skValues.push(cb.value));
-
-    // freeword
-    const freewordInput = form.querySelector('input[name="search_keyword"]');
-    if (freewordInput && freewordInput.value.trim() !== '') {
-      skValues.push(freewordInput.value.trim());
-    }
+      .forEach(cb => {
+        skValues.push(cb.value);
+      });
 
     const skParam = skValues.length
-      ? '?sk=' + encodeURIComponent(skValues.join(','))
+      ? 'sk=' + encodeURIComponent(skValues.join(','))
+      : '';
+
+    // =========================
+    // SEARCH TAG (st)
+    // フリーワード（単数）
+    // =========================
+    let stParam = '';
+
+    const freewordInput = form.querySelector('input[name="search_keyword"]');
+    if (freewordInput && freewordInput.value.trim() !== '') {
+      stParam = 'st=' + encodeURIComponent(freewordInput.value.trim());
+    }
+
+    // =========================
+    // QUERY STRING
+    // =========================
+    let queryParams = [];
+
+    if (skParam) queryParams.push(skParam);
+    if (stParam) queryParams.push(stParam);
+
+    const queryString = queryParams.length
+      ? '?' + queryParams.join('&')
       : '';
 
     // =========================
     // FINAL URL
     // =========================
     const finalUrl =
-      `https://hitomgr.jp/${DB}/${COMPANY}/${device}/list/all/${area}/${prefecture}${skParam}`;
+      `https://hitomgr.jp/${DB}/${COMPANY}/${device}/list/all/${area}/${prefecture}${queryString}`;
 
     // =========================
     // REDIRECT
     // =========================
     window.open(finalUrl, '_blank');
-    console.log(finalUrl);
   });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   hitomgr();
 });
