@@ -38,8 +38,9 @@
 
 
 
-/*Menu Layer
-================================================*/
+/*============================================================================================
+ nav_layer → 画面の右及び左側   
+=============================================================================================*/
 .nav_layer{
   position: fixed;
   inset: 0%;
@@ -116,21 +117,19 @@
   inset: auto 45% 16% auto;
 }
 
+
+
+
+/*============================================================================================
+ content_layer → 画面の中心
+=============================================================================================*/
+/*MV
+================================================*/
 .content_layer {
   position: relative;
   max-width: var(--main-cont);
   margin: 0 auto;
-
-  border-style: none solid;
-  border-width: 1px;
-  border-color: var(--color-border);
-}
-
-.content_main{
-  background-image: url(../img/common/content_b_background_sp.svg);
-  background-position: 0% 0%;
-  background-size: contain;
-  background-repeat: repeat-y;
+  border: 1px solid var(--color-border);
 }
 
 .nav_layer_img_1 {
@@ -206,7 +205,7 @@
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active{
-  background-color: #F9D70A;
+  background-color: var(--color-yellow);
 }
 
 .mv_1_slider figure{
@@ -220,8 +219,6 @@
 
 .content_header_mv_img{
   position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
 .content_header_mv_img > :first-child{
@@ -250,9 +247,16 @@
   background-color: var(--color-blue);
 }
 
+/*Content_main MV以下のコンテンツ
+========================================================================*/
+.content_main{
+  background-image: url(../img/common/content_b_background_sp.svg);
+  background-position: 0% 0%;
+  background-size: contain;
+  background-repeat: repeat-y;
+}
 
-
-/*Search section
+/*Search セクション・仕事検索
 ================================================*/
 .content_search{
   background-color: var(--color-green);
@@ -391,7 +395,7 @@ input[type="text"].search_textBox::placeholder{
 
 
 
-/*Job section
+/*Job セクション・職種紹介
 ================================================*/
 .content_job{
   padding-top:  12rem;
@@ -423,7 +427,7 @@ input[type="text"].search_textBox::placeholder{
 
 
 
-/*About Us section
+/*About Us セクション・私たちについて
 ================================================*/
 .card__aboutus{
   border-radius: 2rem;
@@ -435,9 +439,7 @@ input[type="text"].search_textBox::placeholder{
 
 
 
-
-
-/*Flow section
+/*Flow セクション・配送センターの1日の流れ
 ================================================*/
 .content_flow_inr{
   padding-left: 4rem;
@@ -481,7 +483,7 @@ input[type="text"].search_textBox::placeholder{
 
 
 
-/*Interview section
+/*Interview セクション・スタッフインタビュー
 ================================================*/
 .card__interview{
   position: relative;
@@ -567,7 +569,7 @@ input[type="text"].search_textBox::placeholder{
 
 
 
-/*FAQ section
+/*FAQ セクション・よくある質問
 ================================================*/
 .content_faq{
   padding: 0 0 0 4rem;
@@ -598,7 +600,7 @@ input[type="text"].search_textBox::placeholder{
 
 
 
-/*Movie section
+/*Movie セクション・ドライバー募集動画
 ================================================*/
 .content_movie_inr{
   position: relative;
@@ -690,7 +692,8 @@ input[type="text"].search_textBox::placeholder{
   min-height: 29rem;
 }
 
-
+/*タブレット以下　スタイル
+================================================*/
 @media (max-width: 896px) {
   .header {
     inset: 0% 0% auto;
@@ -806,6 +809,11 @@ input[type="text"].search_textBox::placeholder{
     margin-right: auto;
   }
 }
+
+
+
+/*スマホ以下　スタイル
+================================================*/
 @media (max-width: 576px) {
   .content_header{
     min-height: auto;
@@ -816,6 +824,10 @@ input[type="text"].search_textBox::placeholder{
   }
 }
 
+
+
+/*ホバー　スタイル
+================================================*/
 .search_submit:hover{
     background-color: var(--color-yellow);
   }

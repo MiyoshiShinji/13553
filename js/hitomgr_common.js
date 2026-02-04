@@ -77,7 +77,7 @@ function hitomgr() {
     // =========================
     let skValues = [];
 
-    // 職種
+    // 職種（select）
     form.querySelectorAll('select[name="job"]').forEach(select => {
       if (select.value) {
         skValues.push(select.value);
@@ -85,13 +85,15 @@ function hitomgr() {
     });
 
     // メリット（checkbox → sk）
-    form.querySelectorAll('input[type="checkbox"][name="merit"]:checked')
+    form
+      .querySelectorAll('input[type="checkbox"][name="merit"]:checked')
       .forEach(cb => {
         skValues.push(cb.value);
       });
 
+    // ★ 重要：スペース区切り → %20
     const skParam = skValues.length
-      ? 'sk=' + encodeURIComponent(skValues.join(','))
+      ? 'sk=' + encodeURIComponent(skValues.join(' '))
       : '';
 
     // =========================
@@ -109,7 +111,6 @@ function hitomgr() {
     // QUERY STRING
     // =========================
     let queryParams = [];
-
     if (skParam) queryParams.push(skParam);
     if (stParam) queryParams.push(stParam);
 
